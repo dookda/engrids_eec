@@ -1,0 +1,22 @@
+<layer>
+  <name>a__68_complaint_pollu_cco</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e2e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7da3</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7da3</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e2f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:58:04.120 UTC</dateCreated>
+  <dateModified>2021-07-22 03:21:30.948 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>rain_w28.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7ef4</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7ee4</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-36281551:17ad79bdfeb:-7ee4</id>
+    </style>
+  </styles>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7ef5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-25 02:30:30.235 UTC</dateCreated>
+  <dateModified>2021-07-25 02:45:07.480 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>a__41_flood</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f83</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ee1</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ee1</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f84</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:41:23.257 UTC</dateCreated>
+  <dateModified>2021-07-27 14:24:24.967 UTC</dateModified>
+</layer>

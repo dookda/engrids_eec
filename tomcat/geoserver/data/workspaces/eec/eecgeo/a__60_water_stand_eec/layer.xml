@@ -1,0 +1,22 @@
+<layer>
+  <name>a__60_water_stand_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e4b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7dcf</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7dcf</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e4c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:56:05.339 UTC</dateCreated>
+  <dateModified>2021-07-22 03:15:38.823 UTC</dateModified>
+</layer>

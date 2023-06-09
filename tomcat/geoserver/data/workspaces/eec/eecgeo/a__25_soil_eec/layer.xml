@@ -1,0 +1,22 @@
+<layer>
+  <name>a__25_soil_eec</name>
+  <id>LayerInfoImpl-549dce6c:17eb403dc3e:-ec9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7f02</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7f02</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-549dce6c:17eb403dc3e:-eca</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 07:24:59.465 UTC</dateCreated>
+  <dateModified>2022-02-01 08:18:29.895 UTC</dateModified>
+</layer>

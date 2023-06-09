@@ -1,0 +1,22 @@
+<layer>
+  <name>a__53_pj_area_rid9_3p</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7e86</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7eb8</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7eb8</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7e87</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-30 02:40:15.790 UTC</dateCreated>
+  <dateModified>2021-07-28 07:35:29.967 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>a__05_village</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fed</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7cf6</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7cf6</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fef</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:07:17.554 UTC</dateCreated>
+  <dateModified>2021-07-22 07:39:05.778 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>a__18_hydrogeology</name>
+  <id>LayerInfoImpl-549dce6c:17eb403dc3e:-ecb</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-549dce6c:17eb403dc3e:-eba</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-549dce6c:17eb403dc3e:-eba</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-549dce6c:17eb403dc3e:-ecc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 07:24:44.529 UTC</dateCreated>
+  <dateModified>2022-02-01 08:18:23.538 UTC</dateModified>
+</layer>

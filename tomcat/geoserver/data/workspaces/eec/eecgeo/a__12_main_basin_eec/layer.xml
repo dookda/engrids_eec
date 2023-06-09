@@ -1,0 +1,17 @@
+<layer>
+  <name>a__12_main_basin_eec</name>
+  <id>LayerInfoImpl--2d903bf2:17b99a28626:7573</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7fd6</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2d903bf2:17b99a28626:7572</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-09-22 07:41:40.840 UTC</dateCreated>
+  <dateModified>2021-09-22 07:43:40.215 UTC</dateModified>
+</layer>

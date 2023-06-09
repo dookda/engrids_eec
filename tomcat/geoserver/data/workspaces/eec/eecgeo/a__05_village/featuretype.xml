@@ -1,0 +1,137 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fef</id>
+  <name>a__05_village</name>
+  <nativeName>_05_village</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--7fad4f3e:1791c31c59c:-7ffe</id>
+  </namespace>
+  <title>_05_village</title>
+  <keywords>
+    <string>features</string>
+    <string>_05_village</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;WGS 84 / UTM zone 47N&quot;, &#xd;
+  GEOGCS[&quot;WGS 84&quot;, &#xd;
+    DATUM[&quot;World Geodetic System 1984&quot;, &#xd;
+      SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], &#xd;
+      AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], &#xd;
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xd;
+    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xd;
+    AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]], &#xd;
+  PROJECTION[&quot;Transverse_Mercator&quot;], &#xd;
+  PARAMETER[&quot;central_meridian&quot;, 99.0], &#xd;
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], &#xd;
+  PARAMETER[&quot;scale_factor&quot;, 0.9996], &#xd;
+  PARAMETER[&quot;false_easting&quot;, 500000.0], &#xd;
+  PARAMETER[&quot;false_northing&quot;, 0.0], &#xd;
+  UNIT[&quot;m&quot;, 1.0], &#xd;
+  AXIS[&quot;Easting&quot;, EAST], &#xd;
+  AXIS[&quot;Northing&quot;, NORTH], &#xd;
+  AUTHORITY[&quot;EPSG&quot;,&quot;32647&quot;]]</nativeCRS>
+  <srs>EPSG:32647</srs>
+  <nativeBoundingBox>
+    <minx>700266.7321341872</minx>
+    <maxx>814267.1534531878</maxx>
+    <miny>1396202.586174289</miny>
+    <maxy>1545603.2339981159</maxy>
+    <crs class="projected">EPSG:32647</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>100.84374430812886</minx>
+    <maxx>101.90855770975867</maxx>
+    <miny>12.614172313558997</miny>
+    <maxy>13.973726751689641</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>NONE</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="recalculate-bounds">true</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--7fad4f3e:1791c31c59c:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <attributes>
+    <attribute>
+      <name>vill_id</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.Integer</binding>
+    </attribute>
+    <attribute>
+      <name>vill_name</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>type</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>adm_id</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.Integer</binding>
+    </attribute>
+    <attribute>
+      <name>amp_id</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.Integer</binding>
+    </attribute>
+    <attribute>
+      <name>prv_id</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.Short</binding>
+    </attribute>
+    <attribute>
+      <name>tam_name</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>amp_name</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>prv_name</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>geom</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>org.locationtech.jts.geom.Point</binding>
+    </attribute>
+  </attributes>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

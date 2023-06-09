@@ -1,0 +1,17 @@
+<layer>
+  <name>buphram_ln</name>
+  <id>LayerInfoImpl-34fa3781:17f2f8d5a23:-5f7d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-34fa3781:17f2f8d5a23:-5f5d</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-34fa3781:17f2f8d5a23:-5f7e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-03-01 02:51:43.460 UTC</dateCreated>
+  <dateModified>2022-03-01 03:07:50.730 UTC</dateModified>
+</layer>

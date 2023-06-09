@@ -1,0 +1,22 @@
+<layer>
+  <name>dhammayatra2563</name>
+  <id>LayerInfoImpl--72d33982:1857adbaf2e:-72ea</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--72d33982:1857adbaf2e:-7591</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--72d33982:1857adbaf2e:-7591</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--72d33982:1857adbaf2e:-72eb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-01-16 04:19:25.9 UTC</dateCreated>
+  <dateModified>2023-01-16 04:19:48.670 UTC</dateModified>
+</layer>

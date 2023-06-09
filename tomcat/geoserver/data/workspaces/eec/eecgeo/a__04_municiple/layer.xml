@@ -1,0 +1,17 @@
+<layer>
+  <name>a__04_municiple</name>
+  <id>LayerInfoImpl-549dce6c:17eb403dc3e:-ecf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-72b18647:1799c8d1c94:-7ff0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-549dce6c:17eb403dc3e:-ed0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 07:15:46.487 UTC</dateCreated>
+  <dateModified>2022-02-01 08:18:16.844 UTC</dateModified>
+</layer>

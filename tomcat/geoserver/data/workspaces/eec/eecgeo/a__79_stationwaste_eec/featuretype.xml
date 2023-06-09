@@ -1,0 +1,62 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e0b</id>
+  <name>a__79_stationwaste_eec</name>
+  <nativeName>_79_stationwaste_eec</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--7fad4f3e:1791c31c59c:-7ffe</id>
+  </namespace>
+  <title>_79_stationwaste_eec</title>
+  <keywords>
+    <string>features</string>
+    <string>_79_stationwaste_eec</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;WGS 84 / UTM zone 47N&quot;, &#xd;
+  GEOGCS[&quot;WGS 84&quot;, &#xd;
+    DATUM[&quot;World Geodetic System 1984&quot;, &#xd;
+      SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], &#xd;
+      AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], &#xd;
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xd;
+    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xd;
+    AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]], &#xd;
+  PROJECTION[&quot;Transverse_Mercator&quot;], &#xd;
+  PARAMETER[&quot;central_meridian&quot;, 99.0], &#xd;
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], &#xd;
+  PARAMETER[&quot;scale_factor&quot;, 0.9996], &#xd;
+  PARAMETER[&quot;false_easting&quot;, 500000.0], &#xd;
+  PARAMETER[&quot;false_northing&quot;, 0.0], &#xd;
+  UNIT[&quot;m&quot;, 1.0], &#xd;
+  AXIS[&quot;Easting&quot;, EAST], &#xd;
+  AXIS[&quot;Northing&quot;, NORTH], &#xd;
+  AUTHORITY[&quot;EPSG&quot;,&quot;32647&quot;]]</nativeCRS>
+  <srs>EPSG:32647</srs>
+  <nativeBoundingBox>
+    <minx>696354.0546942849</minx>
+    <maxx>790243.9677489272</maxx>
+    <miny>1389941.9651572725</miny>
+    <maxy>1539900.0437915407</maxy>
+    <crs class="projected">EPSG:32647</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>100.80733871694429</minx>
+    <maxx>101.685806428309</maxx>
+    <miny>12.559922336270828</miny>
+    <maxy>13.922458098187983</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--7fad4f3e:1791c31c59c:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

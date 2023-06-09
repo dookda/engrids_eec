@@ -1,0 +1,52 @@
+<GeoServerTileLayer>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fc3</id>
+  <enabled>true</enabled>
+  <inMemoryCached>true</inMemoryCached>
+  <name>eec:a__17_tapwater</name>
+  <mimeFormats>
+    <string>image/png</string>
+    <string>image/jpeg</string>
+  </mimeFormats>
+  <gridSubsets>
+    <gridSubset>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1228671942088198E7</double>
+          <double>1417659.1195491483</double>
+          <double>1.1343147580890466E7</double>
+          <double>1570918.8047954056</double>
+        </coords>
+      </extent>
+    </gridSubset>
+    <gridSubset>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>100.86887625941858</double>
+          <double>12.631466440698556</double>
+          <double>101.89722841937282</double>
+          <double>13.97125403408578</double>
+        </coords>
+      </extent>
+    </gridSubset>
+  </gridSubsets>
+  <metaWidthHeight>
+    <int>4</int>
+    <int>4</int>
+  </metaWidthHeight>
+  <expireCache>0</expireCache>
+  <expireClients>0</expireClients>
+  <parameterFilters>
+    <styleParameterFilter>
+      <key>STYLES</key>
+      <defaultValue>eec__17_tapwater</defaultValue>
+      <allowedStyles class="java.util.Collections$UnmodifiableSet">
+        <string>_17_tapwater</string>
+      </allowedStyles>
+      <availableStyles class="sorted-set"/>
+      <defaultStyle>eec__17_tapwater</defaultStyle>
+    </styleParameterFilter>
+  </parameterFilters>
+  <gutter>0</gutter>
+</GeoServerTileLayer>

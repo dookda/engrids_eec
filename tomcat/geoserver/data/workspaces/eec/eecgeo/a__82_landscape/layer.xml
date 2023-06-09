@@ -1,0 +1,22 @@
+<layer>
+  <name>a__82_landscape</name>
+  <id>LayerInfoImpl-549dce6c:17eb403dc3e:-ec1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-48c50323:17ae0ea1287:-5e59</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-48c50323:17ae0ea1287:-5e59</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-549dce6c:17eb403dc3e:-ec2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 07:25:53.464 UTC</dateCreated>
+  <dateModified>2022-02-02 08:33:16.355 UTC</dateModified>
+</layer>

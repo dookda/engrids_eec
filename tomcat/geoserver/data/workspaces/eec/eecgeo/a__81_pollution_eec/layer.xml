@@ -1,0 +1,22 @@
+<layer>
+  <name>a__81_pollution_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e08</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d74</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d74</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e09</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 03:01:03.73 UTC</dateCreated>
+  <dateModified>2021-07-22 03:26:44.479 UTC</dateModified>
+</layer>

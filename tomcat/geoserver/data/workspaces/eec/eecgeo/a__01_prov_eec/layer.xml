@@ -1,0 +1,26 @@
+<layer>
+  <name>a__01_prov_eec</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7ff9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-7a261c62:17acd2ba6ce:-7fc2</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-72b18647:1799c8d1c94:-7ff5</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-7a261c62:17acd2ba6ce:-7fc2</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7ffb</id>
+  </resource>
+  <opaque>true</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:07:16.601 UTC</dateCreated>
+  <dateModified>2022-03-15 02:46:07.948 UTC</dateModified>
+</layer>

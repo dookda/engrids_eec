@@ -1,0 +1,22 @@
+<layer>
+  <name>a__52_gsus_muni</name>
+  <id>LayerInfoImpl-549dce6c:17eb403dc3e:-ec3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7ddc</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7ddc</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-549dce6c:17eb403dc3e:-ec4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 07:25:41.420 UTC</dateCreated>
+  <dateModified>2022-02-01 08:18:49.55 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>pk_green_31aug20</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:4927</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:4b14</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:4b14</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--28eda9ea:17ae8e82eb7:4926</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-03 04:30:20.467 UTC</dateCreated>
+  <dateModified>2021-08-03 04:37:50.983 UTC</dateModified>
+</layer>

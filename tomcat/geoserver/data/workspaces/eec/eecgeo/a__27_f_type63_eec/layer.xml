@@ -1,0 +1,17 @@
+<layer>
+  <name>a__27_f_type63_eec</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f9f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7efe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fa0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:38:00.648 UTC</dateCreated>
+  <dateModified>2021-04-30 02:57:56.196 UTC</dateModified>
+</layer>

@@ -1,0 +1,16 @@
+<layer>
+  <name>rain_w14.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7ca7</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7ee4</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7ca8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-25 04:25:23.324 UTC</dateCreated>
+</layer>

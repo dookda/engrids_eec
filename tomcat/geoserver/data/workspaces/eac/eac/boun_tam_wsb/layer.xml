@@ -1,0 +1,22 @@
+<layer>
+  <name>boun_tam_wsb</name>
+  <id>LayerInfoImpl-5ea75041:17c727941e5:-2c07</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2c09</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-5ea75041:17c727941e5:-2c09</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ea75041:17c727941e5:-2c08</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-10 03:19:59.552 UTC</dateCreated>
+  <dateModified>2021-11-10 03:20:28.678 UTC</dateModified>
+</layer>

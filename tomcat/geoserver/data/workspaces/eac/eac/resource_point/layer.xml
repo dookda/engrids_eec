@@ -1,0 +1,17 @@
+<layer>
+  <name>resource_point</name>
+  <id>LayerInfoImpl--ee2dfbe:1841d78cfa2:-75bb</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--ee2dfbe:1841d78cfa2:-75ad</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--ee2dfbe:1841d78cfa2:-75bc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-11-01 09:46:38.20 UTC</dateCreated>
+  <dateModified>2022-11-01 09:57:09.279 UTC</dateModified>
+</layer>

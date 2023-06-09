@@ -1,0 +1,17 @@
+<layer>
+  <name>hole</name>
+  <id>LayerInfoImpl--6870269b:17ff284d66d:-69e0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6870269b:17ff284d66d:-69a9</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6870269b:17ff284d66d:-69e1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-05 07:03:22.249 UTC</dateCreated>
+  <dateModified>2022-05-05 07:36:23.792 UTC</dateModified>
+</layer>

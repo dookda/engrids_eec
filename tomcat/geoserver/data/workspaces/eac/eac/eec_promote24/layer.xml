@@ -1,0 +1,22 @@
+<layer>
+  <name>eec_promote24</name>
+  <id>LayerInfoImpl-5ea75041:17c727941e5:-2f82</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2bea</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-5ea75041:17c727941e5:-2bea</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ea75041:17c727941e5:-2f83</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-08 08:45:49.730 UTC</dateCreated>
+  <dateModified>2021-11-10 03:31:43.283 UTC</dateModified>
+</layer>

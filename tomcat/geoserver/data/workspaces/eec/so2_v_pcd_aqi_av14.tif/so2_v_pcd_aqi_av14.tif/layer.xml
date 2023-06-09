@@ -1,0 +1,16 @@
+<layer>
+  <name>so2_v_pcd_aqi_av14.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7f51</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7f9d</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7f52</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-24 13:53:53.551 UTC</dateCreated>
+</layer>

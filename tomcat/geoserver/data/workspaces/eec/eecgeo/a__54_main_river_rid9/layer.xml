@@ -1,0 +1,17 @@
+<layer>
+  <name>a__54_main_river_rid9</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f43</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ea5</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f44</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:48:38.148 UTC</dateCreated>
+  <dateModified>2021-04-30 03:23:53.508 UTC</dateModified>
+</layer>

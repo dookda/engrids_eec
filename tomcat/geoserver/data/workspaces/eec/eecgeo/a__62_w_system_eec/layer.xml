@@ -1,0 +1,22 @@
+<layer>
+  <name>a__62_w_system_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e47</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7db6</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7db6</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e48</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:56:29.136 UTC</dateCreated>
+  <dateModified>2021-12-08 07:39:07.416 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>contour</name>
+  <id>LayerInfoImpl--6870269b:17ff284d66d:-6a0e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6870269b:17ff284d66d:-69bc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6870269b:17ff284d66d:-6a0f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-05 06:53:51.187 UTC</dateCreated>
+  <dateModified>2022-05-05 07:12:56.835 UTC</dateModified>
+</layer>

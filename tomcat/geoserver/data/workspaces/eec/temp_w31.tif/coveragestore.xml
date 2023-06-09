@@ -1,0 +1,13 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl--28eda9ea:17ae8e82eb7:7318</id>
+  <name>temp_w31.tif</name>
+  <description>temp_w31.tif</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2021-08-04 02:58:23.562 UTC</dateCreated>
+  <url>file://C:\pywps\tiff_tmd\temp_w31.tif</url>
+</coverageStore>

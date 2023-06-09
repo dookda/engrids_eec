@@ -1,0 +1,17 @@
+<layer>
+  <name>a__55_garbage</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7e7c</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7b3c</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7e7d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-30 02:41:08.587 UTC</dateCreated>
+  <dateModified>2021-07-28 07:45:57.811 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>plot_banamp_cbi</name>
+  <id>LayerInfoImpl-5ea75041:17c727941e5:-2a24</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2ac3</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-5ea75041:17c727941e5:-2ac3</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ea75041:17c727941e5:-2a25</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-10 07:59:50.419 UTC</dateCreated>
+  <dateModified>2021-11-10 08:00:32.325 UTC</dateModified>
+</layer>

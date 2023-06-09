@@ -1,0 +1,22 @@
+<layer>
+  <name>a__84_temple</name>
+  <id>LayerInfoImpl-67be65ad:17d0d058acd:-7d63</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-67be65ad:17d0d058acd:-7c7a</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-67be65ad:17d0d058acd:-7c7a</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-67be65ad:17d0d058acd:-7d64</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-15 02:22:58.301 UTC</dateCreated>
+  <dateModified>2021-11-15 03:29:47.414 UTC</dateModified>
+</layer>

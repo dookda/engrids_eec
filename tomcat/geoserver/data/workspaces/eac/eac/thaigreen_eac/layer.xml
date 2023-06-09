@@ -1,0 +1,17 @@
+<layer>
+  <name>thaigreen_eac</name>
+  <id>LayerInfoImpl-34fa3781:17f2f8d5a23:-5f5f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-34fa3781:17f2f8d5a23:-5f4b</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-34fa3781:17f2f8d5a23:-5f60</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-03-01 02:58:56.480 UTC</dateCreated>
+  <dateModified>2022-03-01 03:15:32.67 UTC</dateModified>
+</layer>

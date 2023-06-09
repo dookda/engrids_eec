@@ -1,0 +1,16 @@
+<layer>
+  <name>pk_streamline</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:4931</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe3</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--28eda9ea:17ae8e82eb7:4930</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-03 04:31:43.732 UTC</dateCreated>
+</layer>

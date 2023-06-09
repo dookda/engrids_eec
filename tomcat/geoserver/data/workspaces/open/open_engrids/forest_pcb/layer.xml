@@ -1,0 +1,22 @@
+<layer>
+  <name>forest_pcb</name>
+  <id>LayerInfoImpl--481c6b57:1870ef0d130:-791c</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--481c6b57:1870ef0d130:-7921</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--481c6b57:1870ef0d130:-7921</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--481c6b57:1870ef0d130:-791d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-04-20 05:14:48.939 UTC</dateCreated>
+  <dateModified>2023-04-20 05:15:08.929 UTC</dateModified>
+</layer>

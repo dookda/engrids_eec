@@ -1,0 +1,151 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fec</id>
+  <name>a__06_pollution_control</name>
+  <nativeName>_06_pollution_control</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--7fad4f3e:1791c31c59c:-7ffe</id>
+  </namespace>
+  <title>_06_pollution_control</title>
+  <keywords>
+    <string>features</string>
+    <string>_06_pollution_control</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;WGS 84 / UTM zone 47N&quot;, &#xd;
+  GEOGCS[&quot;WGS 84&quot;, &#xd;
+    DATUM[&quot;World Geodetic System 1984&quot;, &#xd;
+      SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], &#xd;
+      AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], &#xd;
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], &#xd;
+    UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+    AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], &#xd;
+    AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]], &#xd;
+  PROJECTION[&quot;Transverse_Mercator&quot;], &#xd;
+  PARAMETER[&quot;central_meridian&quot;, 99.0], &#xd;
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], &#xd;
+  PARAMETER[&quot;scale_factor&quot;, 0.9996], &#xd;
+  PARAMETER[&quot;false_easting&quot;, 500000.0], &#xd;
+  PARAMETER[&quot;false_northing&quot;, 0.0], &#xd;
+  UNIT[&quot;m&quot;, 1.0], &#xd;
+  AXIS[&quot;Easting&quot;, EAST], &#xd;
+  AXIS[&quot;Northing&quot;, NORTH], &#xd;
+  AUTHORITY[&quot;EPSG&quot;,&quot;32647&quot;]]</nativeCRS>
+  <srs>EPSG:32647</srs>
+  <nativeBoundingBox>
+    <minx>691700.879308423</minx>
+    <maxx>746311.9995733041</maxx>
+    <miny>1399050.8794821464</miny>
+    <maxy>1438159.539260056</maxy>
+    <crs class="projected">EPSG:32647</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>100.7650868745684</minx>
+    <maxx>101.27083996079534</maxx>
+    <miny>12.64595146016841</miny>
+    <maxy>13.003240276075081</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>NONE</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="recalculate-bounds">true</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--7fad4f3e:1791c31c59c:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <attributes>
+    <attribute>
+      <name>reg_code</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.Short</binding>
+    </attribute>
+    <attribute>
+      <name>prov_code</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>amp_code</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>tam_code</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>pro_name_t</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>pro_name_e</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>amp_name_t</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>amp_name_e</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>tam_name_t</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>tam_name_e</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>prvamp</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>java.lang.String</binding>
+    </attribute>
+    <attribute>
+      <name>geom</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>0</maxOccurs>
+      <nillable>false</nillable>
+      <binding>org.locationtech.jts.geom.MultiPolygon</binding>
+    </attribute>
+  </attributes>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

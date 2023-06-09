@@ -1,0 +1,22 @@
+<layer>
+  <name>a__69_complaint_pollu_cbi</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e2c</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7da1</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7da1</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e2d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:58:20.495 UTC</dateCreated>
+  <dateModified>2021-07-22 03:21:52.620 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>prov_eac</name>
+  <id>LayerInfoImpl-34fa3781:17f2f8d5a23:-6161</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2ab8</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-34fa3781:17f2f8d5a23:-6162</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-25 08:46:07.401 UTC</dateCreated>
+  <dateModified>2022-02-25 08:47:22.487 UTC</dateModified>
+</layer>

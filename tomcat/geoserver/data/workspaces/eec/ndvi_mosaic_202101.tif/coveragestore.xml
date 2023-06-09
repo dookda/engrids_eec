@@ -1,0 +1,14 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl--28eda9ea:17b0fea40bc:3de2</id>
+  <name>ndvi_mosaic_202101.tif</name>
+  <description>ndvi_mosaic_202101.tif</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2021-08-19 09:22:39.827 UTC</dateCreated>
+  <dateModified>2021-08-19 09:22:42.46 UTC</dateModified>
+  <url>file://C:\pywps\ndvi\ndvi_mosaic_202101.tif</url>
+</coverageStore>

@@ -1,0 +1,22 @@
+<layer>
+  <name>a__79_stationwaste_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e0a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d7f</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d7f</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e0b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 03:00:48.995 UTC</dateCreated>
+  <dateModified>2021-07-22 03:26:05.198 UTC</dateModified>
+</layer>

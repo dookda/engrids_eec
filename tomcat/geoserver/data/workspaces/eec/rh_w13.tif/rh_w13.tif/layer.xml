@@ -1,0 +1,17 @@
+<layer>
+  <name>rh_w13.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7bea</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7c16</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7beb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-25 04:57:09.510 UTC</dateCreated>
+  <dateModified>2021-07-25 05:12:39.171 UTC</dateModified>
+</layer>

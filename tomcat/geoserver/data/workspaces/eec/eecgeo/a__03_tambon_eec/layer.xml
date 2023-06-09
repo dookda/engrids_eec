@@ -1,0 +1,22 @@
+<layer>
+  <name>a__03_tambon_eec</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7ff3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-7a261c62:17acd2ba6ce:-7f82</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-7a261c62:17acd2ba6ce:-7f82</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7ff5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:07:17.179 UTC</dateCreated>
+  <dateModified>2021-07-22 08:18:08.936 UTC</dateModified>
+</layer>

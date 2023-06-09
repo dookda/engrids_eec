@@ -1,0 +1,22 @@
+<layer>
+  <name>survey</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:4975</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:4b73</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:4b73</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--28eda9ea:17ae8e82eb7:4974</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-03 04:32:45.436 UTC</dateCreated>
+  <dateModified>2021-08-03 04:40:47.733 UTC</dateModified>
+</layer>

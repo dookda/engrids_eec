@@ -1,0 +1,17 @@
+<layer>
+  <name>drought</name>
+  <id>LayerInfoImpl--6870269b:17ff284d66d:-69f0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6870269b:17ff284d66d:-69ba</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6870269b:17ff284d66d:-69f1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-05 07:02:04.179 UTC</dateCreated>
+  <dateModified>2022-05-05 07:21:29.151 UTC</dateModified>
+</layer>

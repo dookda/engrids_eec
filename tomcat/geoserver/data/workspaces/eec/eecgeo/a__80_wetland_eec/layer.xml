@@ -1,0 +1,22 @@
+<layer>
+  <name>a__80_wetland_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7d64</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d7d</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d7d</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7d65</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 03:27:33.651 UTC</dateCreated>
+  <dateModified>2021-08-17 04:48:46.390 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>stream</name>
+  <id>LayerInfoImpl--6870269b:17ff284d66d:-69fe</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6870269b:17ff284d66d:-6990</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6870269b:17ff284d66d:-69ff</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-05 06:55:57.345 UTC</dateCreated>
+  <dateModified>2022-05-05 07:52:46.137 UTC</dateModified>
+</layer>

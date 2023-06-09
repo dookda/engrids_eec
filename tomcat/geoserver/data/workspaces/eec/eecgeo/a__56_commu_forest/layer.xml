@@ -1,0 +1,17 @@
+<layer>
+  <name>a__56_commu_forest</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7e7a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7e99</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7e7b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-30 02:41:19.696 UTC</dateCreated>
+  <dateModified>2021-04-30 03:03:26.837 UTC</dateModified>
+</layer>

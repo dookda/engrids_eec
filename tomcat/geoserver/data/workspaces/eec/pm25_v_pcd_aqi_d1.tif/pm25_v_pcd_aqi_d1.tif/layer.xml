@@ -1,0 +1,22 @@
+<layer>
+  <name>pm25_v_pcd_aqi_d1.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7fb1</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7fe9</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-36281551:17ad79bdfeb:-7fe9</id>
+    </style>
+  </styles>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7fb2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-24 12:44:14.277 UTC</dateCreated>
+  <dateModified>2021-07-24 12:52:38.655 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>lu_5859</name>
+  <id>LayerInfoImpl--6870269b:17ff284d66d:-6a08</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6870269b:17ff284d66d:-69a1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6870269b:17ff284d66d:-6a09</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-05 06:55:12.357 UTC</dateCreated>
+  <dateModified>2022-05-05 07:43:15.84 UTC</dateModified>
+</layer>

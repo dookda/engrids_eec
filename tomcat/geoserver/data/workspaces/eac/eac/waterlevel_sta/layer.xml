@@ -1,0 +1,22 @@
+<layer>
+  <name>waterlevel_sta</name>
+  <id>LayerInfoImpl--6e08e2f6:17eddb6beb1:1dcb</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6e08e2f6:17eddb6beb1:1dd1</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--6e08e2f6:17eddb6beb1:1dd1</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6e08e2f6:17eddb6beb1:1dca</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-11 08:23:20.224 UTC</dateCreated>
+  <dateModified>2022-02-11 08:26:36.87 UTC</dateModified>
+</layer>

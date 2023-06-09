@@ -1,0 +1,54 @@
+<GeoServerTileLayer>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fed</id>
+  <enabled>true</enabled>
+  <inMemoryCached>true</inMemoryCached>
+  <name>eec:a__05_village</name>
+  <mimeFormats>
+    <string>image/png</string>
+    <string>image/jpeg</string>
+  </mimeFormats>
+  <gridSubsets>
+    <gridSubset>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1225874266067985E7</double>
+          <double>1415686.2617544811</double>
+          <double>1.1344408751727268E7</double>
+          <double>1571202.4592947704</double>
+        </coords>
+      </extent>
+    </gridSubset>
+    <gridSubset>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>100.84374430812886</double>
+          <double>12.614172313558997</double>
+          <double>101.90855770975867</double>
+          <double>13.973726751689641</double>
+        </coords>
+      </extent>
+    </gridSubset>
+  </gridSubsets>
+  <metaWidthHeight>
+    <int>4</int>
+    <int>4</int>
+  </metaWidthHeight>
+  <expireCache>0</expireCache>
+  <expireClients>0</expireClients>
+  <parameterFilters>
+    <styleParameterFilter>
+      <key>STYLES</key>
+      <defaultValue>eec__05_village</defaultValue>
+      <allowedStyles class="java.util.Collections$UnmodifiableSet">
+        <string>_05_village</string>
+      </allowedStyles>
+      <availableStyles class="sorted-set">
+        <string>eec:_05_Village_label</string>
+      </availableStyles>
+      <defaultStyle>eec:_05_Village_label2</defaultStyle>
+    </styleParameterFilter>
+  </parameterFilters>
+  <gutter>0</gutter>
+</GeoServerTileLayer>

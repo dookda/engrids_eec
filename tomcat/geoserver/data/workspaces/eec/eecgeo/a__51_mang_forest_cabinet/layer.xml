@@ -1,0 +1,17 @@
+<layer>
+  <name>a__51_mang_forest_cabinet</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f65</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ec5</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f66</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:44:58.195 UTC</dateCreated>
+  <dateModified>2021-04-30 03:01:02.821 UTC</dateModified>
+</layer>

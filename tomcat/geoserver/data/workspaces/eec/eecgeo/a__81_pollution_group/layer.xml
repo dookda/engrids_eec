@@ -1,0 +1,22 @@
+<layer>
+  <name>a__81_pollution_group</name>
+  <id>LayerInfoImpl--28eda9ea:17b0fea40bc:3d82</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17b0fea40bc:3d83</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17b0fea40bc:3d83</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--28eda9ea:17b0fea40bc:3d81</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-19 07:33:50.530 UTC</dateCreated>
+  <dateModified>2021-08-19 07:37:29.921 UTC</dateModified>
+</layer>

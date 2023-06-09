@@ -1,0 +1,17 @@
+<layer>
+  <name>organization</name>
+  <id>LayerInfoImpl--620674da:17db1d9439e:-3093</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--620674da:17db1d9439e:-2ec5</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--620674da:17db1d9439e:-3094</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-12-21 05:00:50.321 UTC</dateCreated>
+  <dateModified>2021-12-24 09:01:09.129 UTC</dateModified>
+</layer>

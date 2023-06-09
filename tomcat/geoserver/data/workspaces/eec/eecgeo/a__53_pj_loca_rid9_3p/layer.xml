@@ -1,0 +1,22 @@
+<layer>
+  <name>a__53_pj_loca_rid9_3p</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f55</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7b3f</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7b3f</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f56</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:46:39.507 UTC</dateCreated>
+  <dateModified>2021-07-28 07:34:13.420 UTC</dateModified>
+</layer>

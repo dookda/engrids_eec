@@ -1,0 +1,25 @@
+<layer>
+  <name>a__72_ancient_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e1f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7aec</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d9b</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7aec</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e20</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:59:05.526 UTC</dateCreated>
+  <dateModified>2021-07-28 08:40:33.436 UTC</dateModified>
+</layer>

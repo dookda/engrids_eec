@@ -1,0 +1,16 @@
+<layer>
+  <name>rain_w51.tif</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:28f4</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7ee4</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--28eda9ea:17ae8e82eb7:28f3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-02 06:04:21.73 UTC</dateCreated>
+</layer>

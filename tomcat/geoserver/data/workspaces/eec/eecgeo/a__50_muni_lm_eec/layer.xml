@@ -1,0 +1,22 @@
+<layer>
+  <name>a__50_muni_lm_eec</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:-798a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ec7</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ec7</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--28eda9ea:17ae8e82eb7:-798b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-28 09:05:27.920 UTC</dateCreated>
+  <dateModified>2021-07-28 09:06:36.201 UTC</dateModified>
+</layer>

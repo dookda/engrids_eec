@@ -1,0 +1,22 @@
+<layer>
+  <name>special_act_promote</name>
+  <id>LayerInfoImpl-5ea75041:17c727941e5:-2f58</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2aae</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-5ea75041:17c727941e5:-2aae</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ea75041:17c727941e5:-2f59</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-08 08:50:12.421 UTC</dateCreated>
+  <dateModified>2021-11-10 04:18:22.160 UTC</dateModified>
+</layer>

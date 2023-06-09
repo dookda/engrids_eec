@@ -1,0 +1,17 @@
+<layer>
+  <name>landmark</name>
+  <id>LayerInfoImpl--6870269b:17ff284d66d:-69dc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6870269b:17ff284d66d:-69a5</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6870269b:17ff284d66d:-69dd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-05 07:03:41.445 UTC</dateCreated>
+  <dateModified>2022-05-05 07:38:40.434 UTC</dateModified>
+</layer>

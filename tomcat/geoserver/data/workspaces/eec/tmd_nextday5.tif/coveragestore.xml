@@ -1,0 +1,13 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl--28eda9ea:17ae8e82eb7:174b</id>
+  <name>tmd_nextday5.tif</name>
+  <description>tmd_nextday5.tif</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2021-07-31 23:41:55.591 UTC</dateCreated>
+  <url>file://C:\pywps\tiff_forecast\tmd_nextday5.tif</url>
+</coverageStore>

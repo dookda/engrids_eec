@@ -1,0 +1,22 @@
+<layer>
+  <name>a__71_natural_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e21</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d9d</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7d9d</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e22</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:58:51.401 UTC</dateCreated>
+  <dateModified>2021-08-17 04:48:13.905 UTC</dateModified>
+</layer>

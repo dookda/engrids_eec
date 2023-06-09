@@ -1,0 +1,22 @@
+<layer>
+  <name>a__46_lu_eec_56</name>
+  <id>LayerInfoImpl--2d903bf2:17b99a28626:-2d20</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ed6</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ed6</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2d903bf2:17b99a28626:-2d21</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-09-02 04:26:09.33 UTC</dateCreated>
+  <dateModified>2021-09-02 04:27:47.53 UTC</dateModified>
+</layer>

@@ -1,0 +1,16 @@
+<layer>
+  <name>aqi_v_pcd_aqi_d10.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7ed6</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7f9c</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7ed7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-25 03:05:07.109 UTC</dateCreated>
+</layer>

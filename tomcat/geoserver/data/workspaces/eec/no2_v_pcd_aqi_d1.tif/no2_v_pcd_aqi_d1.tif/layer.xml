@@ -1,0 +1,22 @@
+<layer>
+  <name>no2_v_pcd_aqi_d1.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7fba</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7f9e</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-36281551:17ad79bdfeb:-7f9e</id>
+    </style>
+  </styles>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7fbb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-24 12:42:16.734 UTC</dateCreated>
+  <dateModified>2021-07-24 12:56:30.462 UTC</dateModified>
+</layer>

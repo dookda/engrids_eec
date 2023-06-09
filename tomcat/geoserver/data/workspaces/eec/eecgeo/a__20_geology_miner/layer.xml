@@ -1,0 +1,17 @@
+<layer>
+  <name>a__20_geology_miner</name>
+  <id>LayerInfoImpl--2d903bf2:17b99a28626:-3a92</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7fb8</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2d903bf2:17b99a28626:-3a93</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-09-01 03:03:20.891 UTC</dateCreated>
+  <dateModified>2021-09-01 03:05:54.997 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>a__24_buildingarea</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fa5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7f05</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fa6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:36:39.241 UTC</dateCreated>
+  <dateModified>2021-04-30 02:57:25.571 UTC</dateModified>
+</layer>

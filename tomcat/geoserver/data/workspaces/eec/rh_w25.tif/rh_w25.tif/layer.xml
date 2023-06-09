@@ -1,0 +1,16 @@
+<layer>
+  <name>rh_w25.tif</name>
+  <id>LayerInfoImpl-36281551:17ad79bdfeb:-7b8b</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-36281551:17ad79bdfeb:-7c16</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-36281551:17ad79bdfeb:-7b8c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-25 05:09:01.438 UTC</dateCreated>
+</layer>

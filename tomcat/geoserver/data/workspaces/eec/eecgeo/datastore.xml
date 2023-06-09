@@ -1,0 +1,35 @@
+<dataStore>
+  <id>DataStoreInfoImpl--7fad4f3e:1791c31c59c:-7ffc</id>
+  <name>eecgeo</name>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="schema">public</entry>
+    <entry key="Estimated extends">false</entry>
+    <entry key="fetch size">1000</entry>
+    <entry key="encode functions">false</entry>
+    <entry key="validate connections">true</entry>
+    <entry key="Expose primary keys">false</entry>
+    <entry key="Support on the fly geometry simplification">false</entry>
+    <entry key="Connection timeout">20</entry>
+    <entry key="create database">false</entry>
+    <entry key="preparedStatements">true</entry>
+    <entry key="database">eecgeo</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:K+3RoWAB/x7BTb+RHrPmznoE9N9OcwFH</entry>
+    <entry key="min connections">1</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="host">172.16.0.2</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="namespace">https://eec-onep.online</entry>
+    <entry key="max connections">10</entry>
+    <entry key="Test while idle">false</entry>
+    <entry key="user">postgres</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2021-04-29 06:07:16.382 UTC</dateCreated>
+  <dateModified>2022-01-31 16:52:50.454 UTC</dateModified>
+</dataStore>

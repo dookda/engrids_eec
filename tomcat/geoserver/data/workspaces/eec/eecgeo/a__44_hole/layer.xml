@@ -1,0 +1,17 @@
+<layer>
+  <name>a__44_hole</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f7d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7edb</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f7e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:42:02.601 UTC</dateCreated>
+  <dateModified>2021-04-30 03:21:01.337 UTC</dateModified>
+</layer>

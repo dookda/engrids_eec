@@ -1,0 +1,52 @@
+<GeoServerTileLayer>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f8d</id>
+  <enabled>true</enabled>
+  <inMemoryCached>true</inMemoryCached>
+  <name>eec:a__36_artsource</name>
+  <mimeFormats>
+    <string>image/png</string>
+    <string>image/jpeg</string>
+  </mimeFormats>
+  <gridSubsets>
+    <gridSubset>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>100.80303993508225</double>
+          <double>12.615369255072356</double>
+          <double>101.82309381434402</double>
+          <double>13.876636734853964</double>
+        </coords>
+      </extent>
+    </gridSubset>
+    <gridSubset>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1221343075987376E7</double>
+          <double>1415822.8006561082</double>
+          <double>1.1334894954408498E7</double>
+          <double>1560067.190024852</double>
+        </coords>
+      </extent>
+    </gridSubset>
+  </gridSubsets>
+  <metaWidthHeight>
+    <int>4</int>
+    <int>4</int>
+  </metaWidthHeight>
+  <expireCache>0</expireCache>
+  <expireClients>0</expireClients>
+  <parameterFilters>
+    <styleParameterFilter>
+      <key>STYLES</key>
+      <defaultValue>36_ArtSource</defaultValue>
+      <allowedStyles class="java.util.Collections$UnmodifiableSet">
+        <string>_36_artsource</string>
+      </allowedStyles>
+      <availableStyles class="sorted-set"/>
+      <defaultStyle>eec:_36_artsource_label</defaultStyle>
+    </styleParameterFilter>
+  </parameterFilters>
+  <gutter>0</gutter>
+</GeoServerTileLayer>

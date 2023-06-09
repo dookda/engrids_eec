@@ -1,0 +1,41 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--481c6b57:1870ef0d130:-791d</id>
+  <name>forest_pcb</name>
+  <nativeName>forest_pcb</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--481c6b57:1870ef0d130:-792b</id>
+  </namespace>
+  <title>forest_pcb</title>
+  <keywords>
+    <string>features</string>
+    <string>forest_pcb</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>101.12683868408203</minx>
+    <maxx>102.93734741210938</maxx>
+    <miny>13.236564636230469</miny>
+    <maxy>14.512803077697754</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>101.12683868408203</minx>
+    <maxx>102.93734741210938</maxx>
+    <miny>13.236564636230469</miny>
+    <maxy>14.512803077697754</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--481c6b57:1870ef0d130:-7926</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

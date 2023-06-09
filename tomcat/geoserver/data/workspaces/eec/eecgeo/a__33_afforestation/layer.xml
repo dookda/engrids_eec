@@ -1,0 +1,17 @@
+<layer>
+  <name>a__33_afforestation</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f93</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ef2</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f94</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:39:31.523 UTC</dateCreated>
+  <dateModified>2021-04-30 02:58:44.102 UTC</dateModified>
+</layer>

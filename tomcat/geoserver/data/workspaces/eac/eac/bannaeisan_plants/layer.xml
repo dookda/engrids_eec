@@ -1,0 +1,17 @@
+<layer>
+  <name>bannaeisan_plants</name>
+  <id>LayerInfoImpl-5ea75041:17c727941e5:-2f98</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2c0f</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ea75041:17c727941e5:-2f99</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-08 08:43:30.962 UTC</dateCreated>
+  <dateModified>2021-11-10 02:58:28.508 UTC</dateModified>
+</layer>

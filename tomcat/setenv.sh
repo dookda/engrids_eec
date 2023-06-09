@@ -1,0 +1,1 @@
+CATALINA_OPTS="$CATALINA_OPTS -Djava.awt.headless=true -Xmx1024m -XX:+UseConcMarkSweepGC -Djavax.servlet.request.encoding=UTF-8 -Dfile.encoding=UTF-8 -Duser.timezone=GMT -Dorg.geotools.referencing.forceXY=true -Dorg.geotools.coverage.jaiext.enabled=true -Djavax.xml.transform.TransformerFactory=org.geotools.xml.transform.TransformerFactoryImpl"

@@ -1,0 +1,22 @@
+<layer>
+  <name>a__64_w_scope_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e3d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7db2</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7db2</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e3e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:57:04.917 UTC</dateCreated>
+  <dateModified>2021-07-22 03:19:11.323 UTC</dateModified>
+</layer>

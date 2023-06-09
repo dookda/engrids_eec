@@ -1,0 +1,52 @@
+<GeoServerTileLayer>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f8f</id>
+  <enabled>true</enabled>
+  <inMemoryCached>true</inMemoryCached>
+  <name>eec:a__35_alroarea</name>
+  <mimeFormats>
+    <string>image/png</string>
+    <string>image/jpeg</string>
+  </mimeFormats>
+  <gridSubsets>
+    <gridSubset>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1231296193015318E7</double>
+          <double>1430430.3496814757</double>
+          <double>1.1347287557469921E7</double>
+          <double>1570177.3815604802</double>
+        </coords>
+      </extent>
+    </gridSubset>
+    <gridSubset>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>100.89245030659056</double>
+          <double>12.743391042856672</double>
+          <double>101.93441846174504</double>
+          <double>13.964790657494584</double>
+        </coords>
+      </extent>
+    </gridSubset>
+  </gridSubsets>
+  <metaWidthHeight>
+    <int>4</int>
+    <int>4</int>
+  </metaWidthHeight>
+  <expireCache>0</expireCache>
+  <expireClients>0</expireClients>
+  <parameterFilters>
+    <styleParameterFilter>
+      <key>STYLES</key>
+      <defaultValue>35_AlroArea</defaultValue>
+      <allowedStyles class="java.util.Collections$UnmodifiableSet">
+        <string>_35_alroarea</string>
+      </allowedStyles>
+      <availableStyles class="sorted-set"/>
+      <defaultStyle>eec:_35_alroarea</defaultStyle>
+    </styleParameterFilter>
+  </parameterFilters>
+  <gutter>0</gutter>
+</GeoServerTileLayer>

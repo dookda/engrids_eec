@@ -1,0 +1,22 @@
+<layer>
+  <name>k_wtn_pb</name>
+  <id>LayerInfoImpl-67be65ad:17d0d058acd:-670e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2bd7</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-5ea75041:17c727941e5:-2bd7</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-67be65ad:17d0d058acd:-670f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-22 06:21:01.462 UTC</dateCreated>
+  <dateModified>2021-11-22 06:23:49.980 UTC</dateModified>
+</layer>

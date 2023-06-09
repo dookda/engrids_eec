@@ -1,0 +1,22 @@
+<layer>
+  <name>houses_vill_m10</name>
+  <id>LayerInfoImpl-5ea75041:17c727941e5:-2f74</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-5ea75041:17c727941e5:-2bd9</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-5ea75041:17c727941e5:-2bd9</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ea75041:17c727941e5:-2f75</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-08 08:47:18.75 UTC</dateCreated>
+  <dateModified>2021-11-10 03:38:49.930 UTC</dateModified>
+</layer>

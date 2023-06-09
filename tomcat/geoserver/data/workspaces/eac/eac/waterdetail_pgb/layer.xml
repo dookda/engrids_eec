@@ -1,0 +1,17 @@
+<layer>
+  <name>waterdetail_pgb</name>
+  <id>LayerInfoImpl-34fa3781:17f2f8d5a23:-5f61</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-34fa3781:17f2f8d5a23:-5f42</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-34fa3781:17f2f8d5a23:-5f62</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-03-01 02:55:53.881 UTC</dateCreated>
+  <dateModified>2022-10-31 03:21:20.264 UTC</dateModified>
+</layer>

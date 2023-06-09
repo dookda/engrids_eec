@@ -1,0 +1,17 @@
+<layer>
+  <name>a__54_4_ctbi_basin</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7e82</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7eae</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7e83</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-30 02:40:34.915 UTC</dateCreated>
+  <dateModified>2021-04-30 03:02:25.103 UTC</dateModified>
+</layer>

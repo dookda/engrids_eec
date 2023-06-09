@@ -1,0 +1,13 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-36281551:17ad79bdfeb:-7ab2</id>
+  <name>temp_w13.tif</name>
+  <description>temp_w13.tif</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2021-07-25 05:34:24.866 UTC</dateCreated>
+  <url>file://C:\pywps\tiff_tmd\temp_w13.tif</url>
+</coverageStore>

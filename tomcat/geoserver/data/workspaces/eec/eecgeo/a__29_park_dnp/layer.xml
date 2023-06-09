@@ -1,0 +1,17 @@
+<layer>
+  <name>a__29_park_dnp</name>
+  <id>LayerInfoImpl--2d903bf2:17b99a28626:-3b6f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7efa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2d903bf2:17b99a28626:-3b70</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-09-01 02:47:24.859 UTC</dateCreated>
+  <dateModified>2021-09-01 02:48:29.16 UTC</dateModified>
+</layer>

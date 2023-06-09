@@ -1,0 +1,17 @@
+<layer>
+  <name>act_allpoint</name>
+  <id>LayerInfoImpl--ee2dfbe:1841d78cfa2:-75c5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--ee2dfbe:1841d78cfa2:-75b7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--ee2dfbe:1841d78cfa2:-75c6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-11-01 09:45:19.919 UTC</dateCreated>
+  <dateModified>2022-11-01 09:55:10.703 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>pk_landpacel</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:4929</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:4b34</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:4b34</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--28eda9ea:17ae8e82eb7:4928</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-03 04:30:35.311 UTC</dateCreated>
+  <dateModified>2021-08-03 04:39:00.389 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>mainbasin_eac</name>
+  <id>LayerInfoImpl-34fa3781:17f2f8d5a23:-616b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-67be65ad:17d0d058acd:-7fa7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-34fa3781:17f2f8d5a23:-616c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-25 08:37:59.958 UTC</dateCreated>
+  <dateModified>2022-02-25 08:56:33.897 UTC</dateModified>
+</layer>

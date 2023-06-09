@@ -1,0 +1,14 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-36281551:17ad79bdfeb:-6bc8</id>
+  <name>rain_w32.tif</name>
+  <description>rain_w32.tif</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2021-07-25 14:32:42.481 UTC</dateCreated>
+  <dateModified>2021-08-09 02:27:02.826 UTC</dateModified>
+  <url>file://C:\pywps\tiff_tmd\rain_w32.tif</url>
+</coverageStore>

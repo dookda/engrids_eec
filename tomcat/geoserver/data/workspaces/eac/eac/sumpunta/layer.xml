@@ -1,0 +1,17 @@
+<layer>
+  <name>sumpunta</name>
+  <id>LayerInfoImpl-34fa3781:17f2f8d5a23:-5f6b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-34fa3781:17f2f8d5a23:-5f4d</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-34fa3781:17f2f8d5a23:-5f6c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-03-01 02:53:35.5 UTC</dateCreated>
+  <dateModified>2022-03-01 03:14:57.328 UTC</dateModified>
+</layer>

@@ -1,0 +1,22 @@
+<layer>
+  <name>a__63_w_pipe_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e3f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7db4</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7db4</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e40</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:56:51.698 UTC</dateCreated>
+  <dateModified>2021-07-22 03:18:38.182 UTC</dateModified>
+</layer>

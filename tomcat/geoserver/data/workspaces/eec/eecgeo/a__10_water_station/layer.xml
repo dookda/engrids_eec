@@ -1,0 +1,22 @@
+<layer>
+  <name>a__10_water_station</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fde</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--22a3008f:17ae795e863:-7fa1</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--22a3008f:17ae795e863:-7fa1</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fe0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:07:18.241 UTC</dateCreated>
+  <dateModified>2021-07-27 14:05:30.998 UTC</dateModified>
+</layer>

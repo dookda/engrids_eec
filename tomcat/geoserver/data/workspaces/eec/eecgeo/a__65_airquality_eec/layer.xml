@@ -1,0 +1,22 @@
+<layer>
+  <name>a__65_airquality_eec</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e3b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7da9</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-52dccc4f:17a86e41afa:-7da9</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e3c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:57:18.886 UTC</dateCreated>
+  <dateModified>2021-08-20 04:55:04.203 UTC</dateModified>
+</layer>

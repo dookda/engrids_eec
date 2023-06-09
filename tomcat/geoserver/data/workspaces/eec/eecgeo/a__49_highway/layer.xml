@@ -1,0 +1,17 @@
+<layer>
+  <name>a__49_highway</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7f6d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ecb</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7f6e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:44:05.913 UTC</dateCreated>
+  <dateModified>2021-04-30 03:00:40.571 UTC</dateModified>
+</layer>

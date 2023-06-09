@@ -1,0 +1,13 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-36281551:17ad79bdfeb:-7e22</id>
+  <name>no2_v_pcd_aqi_d4.tif</name>
+  <description>no2_v_pcd_aqi_d4.tif</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--7fad4f3e:1791c31c59c:-7fff</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2021-07-25 03:38:38.456 UTC</dateCreated>
+  <url>file://C:\pywps\tiff_no2\no2_v_pcd_aqi_d4.tif</url>
+</coverageStore>

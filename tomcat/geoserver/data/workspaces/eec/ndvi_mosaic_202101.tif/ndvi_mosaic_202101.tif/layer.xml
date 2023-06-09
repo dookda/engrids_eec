@@ -1,0 +1,16 @@
+<layer>
+  <name>ndvi_mosaic_202101.tif</name>
+  <id>LayerInfoImpl--28eda9ea:17b0fea40bc:3de4</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe2</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--28eda9ea:17b0fea40bc:3de3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-19 09:23:52.671 UTC</dateCreated>
+</layer>

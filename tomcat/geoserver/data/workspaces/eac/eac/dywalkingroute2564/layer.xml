@@ -1,0 +1,22 @@
+<layer>
+  <name>dywalkingroute2564</name>
+  <id>LayerInfoImpl--72d33982:1857adbaf2e:-759b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--72d33982:1857adbaf2e:-7584</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--72d33982:1857adbaf2e:-7584</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--72d33982:1857adbaf2e:-759c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-01-16 02:49:09.974 UTC</dateCreated>
+  <dateModified>2023-01-16 02:55:00.486 UTC</dateModified>
+</layer>

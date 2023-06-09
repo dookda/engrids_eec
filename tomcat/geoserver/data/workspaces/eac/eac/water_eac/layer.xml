@@ -1,0 +1,22 @@
+<layer>
+  <name>water_eac</name>
+  <id>LayerInfoImpl--6e08e2f6:17eddb6beb1:1dc7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6e08e2f6:17eddb6beb1:1dcd</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--6e08e2f6:17eddb6beb1:1dcd</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6e08e2f6:17eddb6beb1:1dc6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-11 08:22:49.413 UTC</dateCreated>
+  <dateModified>2022-10-31 03:19:39.246 UTC</dateModified>
+</layer>

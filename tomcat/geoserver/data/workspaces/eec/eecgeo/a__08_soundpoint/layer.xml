@@ -1,0 +1,22 @@
+<layer>
+  <name>a__08_soundpoint</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fe4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--22a3008f:17ae795e863:-7fa3</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--22a3008f:17ae795e863:-7fa3</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fe6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:07:17.929 UTC</dateCreated>
+  <dateModified>2021-07-27 14:02:01.357 UTC</dateModified>
+</layer>

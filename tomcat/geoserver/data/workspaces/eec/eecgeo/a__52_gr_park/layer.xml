@@ -1,0 +1,25 @@
+<layer>
+  <name>a__52_gr_park</name>
+  <id>LayerInfoImpl-549dce6c:17eb403dc3e:-ec5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ec3</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7aed</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7ec3</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-549dce6c:17eb403dc3e:-ec6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-01 07:25:27.379 UTC</dateCreated>
+  <dateModified>2022-02-01 08:18:42.931 UTC</dateModified>
+</layer>

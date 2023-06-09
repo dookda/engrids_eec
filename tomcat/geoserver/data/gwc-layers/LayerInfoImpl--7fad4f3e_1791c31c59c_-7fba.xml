@@ -1,0 +1,52 @@
+<GeoServerTileLayer>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fba</id>
+  <enabled>true</enabled>
+  <inMemoryCached>true</inMemoryCached>
+  <name>eec:a__19_geology50k</name>
+  <mimeFormats>
+    <string>image/png</string>
+    <string>image/jpeg</string>
+  </mimeFormats>
+  <gridSubsets>
+    <gridSubset>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1203654579690302E7</double>
+          <double>1402507.7455355113</double>
+          <double>1.1354357188899165E7</double>
+          <double>1571862.6595701317</double>
+        </coords>
+      </extent>
+    </gridSubset>
+    <gridSubset>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>100.6441414693147</double>
+          <double>12.49861917459171</double>
+          <double>101.99792604140485</double>
+          <double>13.979481850504008</double>
+        </coords>
+      </extent>
+    </gridSubset>
+  </gridSubsets>
+  <metaWidthHeight>
+    <int>4</int>
+    <int>4</int>
+  </metaWidthHeight>
+  <expireCache>0</expireCache>
+  <expireClients>0</expireClients>
+  <parameterFilters>
+    <styleParameterFilter>
+      <key>STYLES</key>
+      <defaultValue>eec__19_geology50k</defaultValue>
+      <allowedStyles class="java.util.Collections$UnmodifiableSet">
+        <string>_19_geology50k</string>
+      </allowedStyles>
+      <availableStyles class="sorted-set"/>
+      <defaultStyle>eec__19_geology50k</defaultStyle>
+    </styleParameterFilter>
+  </parameterFilters>
+  <gutter>0</gutter>
+</GeoServerTileLayer>

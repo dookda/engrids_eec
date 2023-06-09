@@ -1,0 +1,22 @@
+<layer>
+  <name>a__73_old_community_eec_point</name>
+  <id>LayerInfoImpl-52dccc4f:17a86e41afa:-7e1d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7aea</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:-7aea</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52dccc4f:17a86e41afa:-7e1e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-07-22 02:59:20.511 UTC</dateCreated>
+  <dateModified>2021-10-27 03:06:55.527 UTC</dateModified>
+</layer>

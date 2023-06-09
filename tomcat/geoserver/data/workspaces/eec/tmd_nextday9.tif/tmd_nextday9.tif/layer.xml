@@ -1,0 +1,16 @@
+<layer>
+  <name>tmd_nextday9.tif</name>
+  <id>LayerInfoImpl--28eda9ea:17ae8e82eb7:1de7</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--28eda9ea:17ae8e82eb7:1741</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--28eda9ea:17ae8e82eb7:1de6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-08-01 04:33:06.653 UTC</dateCreated>
+</layer>

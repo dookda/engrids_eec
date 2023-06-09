@@ -1,0 +1,16 @@
+<layer>
+  <name>a__19_geology250k</name>
+  <id>LayerInfoImpl--7fad4f3e:1791c31c59c:-7fbd</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--7fad4f3e:1791c31c59c:-7fbe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7fad4f3e:1791c31c59c:-7fbf</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 06:07:20.116 UTC</dateCreated>
+</layer>
