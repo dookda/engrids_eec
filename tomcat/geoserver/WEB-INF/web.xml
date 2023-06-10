@@ -50,7 +50,7 @@
      -->
      <context-param>
         <param-name>PROXY_BASE_URL</param-name>
-        <param-value>https://engrids.soc.cmu.ac.th/geoserver</param-value>
+        <param-value>http://localhost:8080/geoserver</param-value>
     </context-param>
 
     <context-param>

@@ -19,10 +19,10 @@
     <entry key="preparedStatements">true</entry>
     <entry key="database">eecgeo</entry>
     <entry key="port">5432</entry>
-    <entry key="passwd">crypt1:K+3RoWAB/x7BTb+RHrPmznoE9N9OcwFH</entry>
+    <entry key="passwd">crypt1:CTdL/SS/mbp/wUi0JW2B2w==</entry>
     <entry key="min connections">1</entry>
     <entry key="dbtype">postgis</entry>
-    <entry key="host">172.16.0.2</entry>
+    <entry key="host">postgis</entry>
     <entry key="Loose bbox">true</entry>
     <entry key="namespace">https://eec-onep.online</entry>
     <entry key="max connections">10</entry>
@@ -31,5 +31,5 @@
   </connectionParameters>
   <__default>false</__default>
   <dateCreated>2021-04-29 06:07:16.382 UTC</dateCreated>
-  <dateModified>2022-01-31 16:52:50.454 UTC</dateModified>
+  <dateModified>2023-06-09 14:29:12.469 UTC</dateModified>
 </dataStore>

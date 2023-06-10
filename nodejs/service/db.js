@@ -2,17 +2,17 @@ const Pool = require('pg').Pool
 
 const eec = new Pool({
     user: 'postgres',
-    host: 'localhost',
+    host: 'postgis',
     database: 'eec',
-    password: 'Eec-MIS2564db',
+    password: '1234',
     port: 5432,
 });
 
 const geo = new Pool({
     user: 'postgres',
-    host: 'localhost',
+    host: 'postgis',
     database: 'eecgeo',
-    password: 'Eec-MIS2564db',
+    password: '1234',
     port: 5432,
 });
 
@@ -34,9 +34,9 @@ const iot = new Pool({
 
 const th = new Pool({
     user: 'postgres',
-    host: '119.59.125.134',
+    host: 'postgis',
     database: 'th',
-    password: 'Pgis@rti2dss@2020',
+    password: '1234',
     port: 5432,
 });
 const eac = new Pool({

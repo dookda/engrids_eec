@@ -39,8 +39,8 @@ app.use(bodyParser.urlencoded({
 //     console.log('listening on port ' + server.address().port);
 // });
 
-app.listen(3700, () => {
-    console.log('running on http://localhost:3700')
+app.listen(3000, () => {
+    console.log('running on http://localhost')
 });
 
 app.use(express.static(__dirname + '/www'));

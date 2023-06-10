@@ -6,6 +6,10 @@ const dat = con.dat;
 const th = con.th;
 const geo = con.geo;
 
+app.get("/eec-api/da", (req, res) => {
+    console.log("da");
+});
+
 app.get("/eec-api/get-extent/:lyr/:val", (req, res) => {
     const lyr = req.params.lyr;
     const val = req.params.val;
@@ -71,7 +75,7 @@ app.get("/eec-api/get-bound/:lyr/:val", (req, res) => {
             FROM tambon_4326
             WHERE tb_idn = '${val}'`;
     }
-
+    console.log(sql);
     th.query(sql).then((r) => {
         res.status(200).json({
             data: r.rows
