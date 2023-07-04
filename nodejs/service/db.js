@@ -18,9 +18,9 @@ const geo = new Pool({
 
 const dat = new Pool({
     user: 'postgres',
-    host: '119.59.125.134',
+    host: '172.16.0.2',
     database: 'data',
-    password: 'Pgis@rti2dss@2020',
+    password: 'Eec-MIS2564db',
     port: 5432,
 });
 
@@ -39,6 +39,7 @@ const th = new Pool({
     password: '1234',
     port: 5432,
 });
+
 const eac = new Pool({
     user: 'postgres',
     host: 'localhost',
