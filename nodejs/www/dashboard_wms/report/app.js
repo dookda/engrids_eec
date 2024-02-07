@@ -32,7 +32,7 @@ $('#btnAccept').click(() => {
 })
 
 const url = "https://engrids.soc.cmu.ac.th/api";
-const eecGeoserver = "https://engrids.soc.cmu.ac.th/geoserver";
+const eecGeoserver = "/geoserver";
 
 let latlng = {
     lat: 13.205567,
@@ -956,7 +956,7 @@ let callAttribute = (lyr) => {
         table.destroy();
         $('#attrib').empty();
     }
-    let geojson = "https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS" +
+    let geojson = "/geoserver/eec/ows?service=WFS" +
         "&version=1.0.0" +
         "&request=GetFeature" +
         "&typeName=eec%3A" + lyr +
@@ -1033,7 +1033,7 @@ let loadHotspot = async () => {
     }).addTo(map);
 }
 
-let responseAll = axios.get(url + '/eec-api/get-aqi-all');
+let responseAll = axios.get('/eec-api/get-aqi-all');
 let loadAqi = async () => {
     let iconblue = L.icon({
         iconUrl: './marker/location-pin-blue.svg',
@@ -1133,7 +1133,7 @@ let loadAqi = async () => {
     })
 }
 
-let responseWeather = axios.get(url + '/eec-api/get-weather-3hr-all');
+let responseWeather = axios.get('/eec-api/get-weather-3hr-all');
 let loadMeteo = async () => {
     let iconblue = L.icon({
         iconUrl: './marker-meteo/location-pin-blue.svg',
@@ -1231,12 +1231,12 @@ let loadMeteo = async () => {
     })
 }
 
-const responseGwater = axios.get(url + "/gwater-api/getdata");
+const responseGwater = axios.get("/gwater-api/getdata");
 // const api_3 = axios.get("https://engrids.soc.cmu.ac.th:3700/api/rankWater/");
 
 let onEachFeatureGw = (feature, layer) => {
     // console.log(lyr.properties);
-    axios.post(url + "/gwater-api/sensordetail", { station_id: feature.properties.station_id }).then(async (r) => {
+    axios.post("/gwater-api/sensordetail", { station_id: feature.properties.station_id }).then(async (r) => {
         let txt = "";
         await r.data.data.map(i => {
             // console.log(i);
@@ -1462,7 +1462,7 @@ $("input[name='basemap']").change(async (r) => {
     base[`${basemap}`].addTo(map);
 })
 
-let eecUrl = "https://engrids.soc.cmu.ac.th/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
+let eecUrl = "http://localhost/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
 let gistdaUrl = "http://ocean.gistda.or.th:80/geoserver/coastalradar/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=";
 let costUrl = "http://marinegiscenter.dmcr.go.th/cgi-bin/mapserv.exe?MAP=%2Fms4w%2Fapps%2Fgeomoose2%2Fmaps%2F%2Fdmcr%2Fgroup1%2Fshoreline_2559.map?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=";
 // let rtiUrl = "https://rti2dss.com:8443/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=";
@@ -1574,7 +1574,7 @@ $("#WquaLegend").attr("src", "./marker/sta_qu.png");
 $("#cardpop").hide()
 $("#popcheck").click(function () {
 
-    axios.get(url + `/thpopulation/get/pcode`).then(async (r) => {
+    axios.get(`/thpopulation/get/pcode`).then(async (r) => {
         var d = r.data.data;
         d.map(i => {
             $('#pro').append(`<option value="${i.p_code}">${i.p_name}</option>`)
@@ -1698,7 +1698,7 @@ function presentpop(year, pcode, Mclass, Wclass) {
     var b = pcode
     $('#Vyear1').html(a)
     $('#Vyear2').html(a)
-    axios.get(url + `/thpopulation/get/year/${a}/${b}`).then(async (r) => {
+    axios.get(`/thpopulation/get/year/${a}/${b}`).then(async (r) => {
         var d = r.data.data;
         // console.log(d)
         var men = d[0].yvalue;
@@ -1767,7 +1767,7 @@ let MWPop = (pcode) => {
     var a = pcode
     var b = $('#typepop').val()
     var dat = [];
-    axios.get(url + `/thpopulation/get/province/${a}`).then(async (r) => {
+    axios.get(`/thpopulation/get/province/${a}`).then(async (r) => {
         var d = r.data.data
         if (a == "TH") {
             $('#hiprov').html(`ข้อมูลประชากรย้อนหลังตั้งแต่ปี 2554-2563 ทั้งประเทศ ประเภท${b}`)
@@ -1945,7 +1945,7 @@ let sumpop = (pcode) => {
     var a = pcode
     var b = $('#typepop').val()
     var dat = [];
-    axios.get(url + `/thpopulation/get/province/${a}`).then(async (r) => {
+    axios.get(`/thpopulation/get/province/${a}`).then(async (r) => {
         var d = r.data.data
         if (a == "TH") {
             $('#hiprov').html(`ข้อมูลประชากรย้อนหลังตั้งแต่ปี 2554-2563 ทั้งประเทศ ประเภท${b}`)
@@ -1990,7 +1990,7 @@ let sumpop = (pcode) => {
 let denpop = (pcode) => {
     var a = pcode;
     var dat = [];
-    axios.get(url + `/thpopulation/get/province/${a}`).then(async (r) => {
+    axios.get(`/thpopulation/get/province/${a}`).then(async (r) => {
         var d = r.data.data
         if (a == "TH") {
             $('#hiprov').html(`ข้อมูลความหนาแน่นของประชากรย้อนหลังตั้งแต่ปี 2554-2563 ${d[0].p_name}`)
@@ -2034,7 +2034,7 @@ let denpop = (pcode) => {
 let homepop = (pcode) => {
     var a = pcode;
     var dat = [];
-    axios.get(url + `/thpopulation/get/province/${a}`).then(async (r) => {
+    axios.get(`/thpopulation/get/province/${a}`).then(async (r) => {
         var d = r.data.data
         if (a == "TH") {
             $('#hiprov').html(`ข้อมูลจำนวนครัวเรือนย้อนหลังตั้งแต่ปี 2554-2563 ${d[0].p_name}`)

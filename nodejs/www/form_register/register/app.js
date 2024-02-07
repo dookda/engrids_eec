@@ -18,7 +18,7 @@ function refreshPage() {
 }
 
 let getProv = () => {
-    axios.get(url + "/eec-api/get-th-prov").then(r => {
+    axios.get("/eec-api/get-th-prov").then(r => {
         // console.log(r)
         $("#pro").empty()
         $("#amp").empty()
@@ -32,7 +32,7 @@ let getProv = () => {
 getProv()
 
 let getAmp = (e) => {
-    axios.get(url + "/eec-api/get-th-amp/" + e).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e).then(r => {
         // console.log(r);
         $("#amp").empty()
         $("#tam").empty()
@@ -44,7 +44,7 @@ let getAmp = (e) => {
 }
 
 let getTam = (e) => {
-    axios.get(url + "/eec-api/get-th-tam/" + e).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e).then(r => {
         // console.log(r);
         $("#tam").empty()
         $("#tam").append(`<option value=""></option>`)
@@ -55,7 +55,7 @@ let getTam = (e) => {
 }
 
 let getTamOne = (e) => {
-    axios.get(url + "/eec-api/get-th-onetam/" + e).then(r => {
+    axios.get("/eec-api/get-th-onetam/" + e).then(r => {
         r.data.data.map(i => {
             // console.log(i);
             $("#pro_name").val(i.pro_name);
@@ -97,7 +97,7 @@ let checkdata = async () => {
 $("#accountcheck").hide()
 $('#tele').on("keyup", function () {
     let user = $("#tele").val()
-    axios.post(url + "/profile-api/chkuser", { user }).then(r => {
+    axios.post("/profile-api/chkuser", { user }).then(r => {
         console.log(r);
         r.data.data[0].count !== '0' ? $("#accountcheck").show() : $("#accountcheck").hide()
     })
@@ -262,7 +262,7 @@ let sendData = () => {
             }
         }
 
-        $.post(url + '/profile-api/register', obj).done(async (res) => {
+        $.post('/profile-api/register', obj).done(async (res) => {
             $('#okmodal').modal('show');
         })
         return false;

@@ -104,7 +104,7 @@ let getData = (pid) => {
         "weight": 2,
         "opacity": 0.65
     };
-    axios.post(url + "/projmon2-api/getdetail_new", { pid }).then(r => {
+    axios.post("/projmon2-api/getdetail_new", { pid }).then(r => {
         console.log(r.data.data);
         document.getElementById("p_order").value = r.data.data[0].p_order;
         document.getElementById("p_strategy").value = r.data.data[0].p_strategy;
@@ -217,7 +217,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     // console.log(obj);
-    axios.post(url + "/projmon2-api/updatedata_new", obj).then((r) => {
+    axios.post("/projmon2-api/updatedata_new", obj).then((r) => {
         // r.data.data == "success" ? refreshPage() : null
     })
     return false;

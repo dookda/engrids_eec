@@ -137,9 +137,9 @@ $("#prj_measure").change(i => {
 })
 
 let getActivity = (prj_measure) => {
-    axios.post(url + "/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
+    axios.post("/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
         $("#list_measure").empty()
-        axios.post(url + "/projmon-api/getmeasurebyact", { prj_id: id }).then(x => {
+        axios.post("/projmon-api/getmeasurebyact", { prj_id: id }).then(x => {
 
             if (x.data.data[0].prj_measure == prj_measure) {
                 r.data.data.map((i, k) => {
@@ -218,7 +218,7 @@ let getActivity = (prj_measure) => {
 }
 
 let getData = () => {
-    axios.get(url + "/login-api/getorg").then(r => {
+    axios.get("/login-api/getorg").then(r => {
         r.data.data.map(i => {
             $("#prj_operat").append(`<option value="${i.prj_operat}">${i.prj_operat}</option>`)
         })
@@ -239,7 +239,7 @@ let getValue = (id) => {
         "opacity": 0.65
     };
 
-    axios.post(url + "/projmon-api/getone", { prj_id: id }).then(async (r) => {
+    axios.post("/projmon-api/getone", { prj_id: id }).then(async (r) => {
         // console.log(r.data.data[0]);
         $('#prj_id').val(r.data.data[0].prj_id)
         $('#prj_cate').val(r.data.data[0].prj_cate)
@@ -385,7 +385,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     // console.log(obj);
-    axios.post(url + "/projmon-api/updatedata", obj).then((r) => {
+    axios.post("/projmon-api/updatedata", obj).then((r) => {
         r.data.data == "success" ? refreshPage() : null
     })
     return false;

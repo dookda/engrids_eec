@@ -112,7 +112,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let proj_id = $("#projId").val()
-    axios.post(url + "/biodiversity-api/delete", { proj_id: proj_id }).then(r => {
+    axios.post("/biodiversity-api/delete", { proj_id: proj_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }

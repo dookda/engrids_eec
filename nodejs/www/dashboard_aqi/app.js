@@ -100,7 +100,7 @@ const ghyb = L.tileLayer("https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}",
   subdomains: ["mt0", "mt1", "mt2", "mt3"]
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
   layers: "eec:a__03_tambon_eec",
   format: "image/png",
   transparent: true,
@@ -109,7 +109,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
   // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
   layers: "eec:a__02_amphoe_eec",
   format: "image/png",
   transparent: true,
@@ -118,7 +118,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
   // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
   layers: "eec:a__01_prov_eec",
   format: "image/png",
   transparent: true,
@@ -126,12 +126,12 @@ const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
   // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const airqualityeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const airqualityeec = L.tileLayer.wms("/geoserver/eec/wms?", {
   layers: 'eec:a__65_airquality_eec',
   format: 'image/png',
   transparent: true
 });
-const pollution = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pollution = L.tileLayer.wms("/geoserver/eec/wms?", {
   layers: 'eec:a__81_pollution_group',
   format: 'image/png',
   transparent: true,
@@ -284,7 +284,7 @@ let zoomExtent = (lyr, code) => {
     }
   })
 
-  axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+  axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
     let geom = JSON.parse(r.data.data[0].geom)
     var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
 
@@ -298,7 +298,7 @@ let zoomExtent = (lyr, code) => {
 }
 
 // let zoomExtent = (lyr, code) => {
-//   axios.get(url + `/eec-api/get-extent/ ${lyr} /${code}`).then(r => {
+//   axios.get( `/eec-api/get-extent/ ${lyr} /${code}`).then(r => {
 //     let geom = JSON.parse(r.data.data[0].geom)
 //     map.fitBounds([
 //       geom.coordinates[0][0],
@@ -308,7 +308,7 @@ let zoomExtent = (lyr, code) => {
 // }
 
 let getPro = (procode) => {
-  axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+  axios.get(`/eec-api/get-amp/${procode}`).then(r => {
     // console.log(r.data.data);
     $("#amp").empty().append(`<option value="eec">เลือกอำเภอ</option>`);;
     $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);;
@@ -319,7 +319,7 @@ let getPro = (procode) => {
 }
 
 let getAmp = (ampcode) => {
-  axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+  axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
     $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
     r.data.data.map(i => {
       $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)
@@ -328,8 +328,8 @@ let getAmp = (ampcode) => {
 }
 
 let hpData = axios.get("https://firms.modaps.eosdis.nasa.gov/mapserver/wfs/SouthEast_Asia/c56f7d70bc06160e3c443a592fd9c87e/?SERVICE=WFS&REQUEST=GetFeature&VERSION=2.0.0&TYPENAME=ms:fires_snpp_24hrs&STARTINDEX=0&COUNT=5000&SRSNAME=urn:ogc:def:crs:EPSG::4326&BBOX=-90,-180,90,180,urn:ogc:def:crs:EPSG::4326&outputformat=geojson");
-let response = axios.get(url + '/eec-api/get-aqi');
-let responseAll = axios.get(url + '/eec-api/get-aqi-all');
+let response = axios.get('/eec-api/get-aqi');
+let responseAll = axios.get('/eec-api/get-aqi-all');
 
 let rmLyr = () => {
   map.eachLayer(lyr => {
@@ -376,7 +376,7 @@ let loadHotspot = async () => {
 }
 
 let nearData = async (e) => {
-  let res = await axios.post(url + '/eec-api/get-aqi-near', { geom: e.latlng });
+  let res = await axios.post('/eec-api/get-aqi-near', { geom: e.latlng });
   // console.log(res.data.data[0]);
   $("#sta_id").text(res.data.data[0].sta_id)
   $("#sta_th").text(res.data.data[0].sta_th)
@@ -1248,7 +1248,7 @@ let barChart = (datArr, unit, title) => {
 
 // let showHistoryChart = (id) => {
 //   let sta_id = id.target.options.id
-//   axios.post(url + '/eec-api/get-hist', { sta_id: sta_id }).then((r) => {
+//   axios.post( '/eec-api/get-hist', { sta_id: sta_id }).then((r) => {
 //   }).catch((err) => {
 //   });
 // }
@@ -1256,7 +1256,7 @@ let barChart = (datArr, unit, title) => {
 let showChart = async (e) => {
   // ${e.sta_th} 
   $("#sta_name").text(`${e.area_th}`)
-  let d = await axios.post(url + '/eec-api/get-hist', { sta_id: e.sta_id });
+  let d = await axios.post('/eec-api/get-hist', { sta_id: e.sta_id });
 
   let arrPM25 = [];
   let arrPM10 = [];

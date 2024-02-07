@@ -38,7 +38,7 @@ $('#btnAccept').click(() => {
 
 const url = "https://engrids.soc.cmu.ac.th/api";
 // const url = 'http://localhost:3700';
-const eecGeoserver = "https://engrids.soc.cmu.ac.th/geoserver/eec/wms?";
+const eecGeoserver = "/geoserver/eec/wms?";
 
 let map = L.map('map', {
     center: [13.156242, 101.339052],
@@ -221,7 +221,7 @@ $("#tam").on("change", function () {
     }
 });
 let zoomExtent = (lyr, code) => {
-    axios.get(url + `/eec-api/get-extent/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-extent/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         // console.log(geom);
         map.fitBounds([
@@ -236,14 +236,14 @@ let zoomExtent = (lyr, code) => {
         }
     })
 
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
         map.fitBounds(polygon.getBounds());
     })
 }
 let getPro = (procode) => {
-    axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+    axios.get(`/eec-api/get-amp/${procode}`).then(r => {
         // console.log(r.data.data);
         $("#amp").empty().append(`<option value="eec">เลือกอำเภอ</option>`);
         $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
@@ -253,7 +253,7 @@ let getPro = (procode) => {
     })
 }
 let getAmp = (ampcode) => {
-    axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+    axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
         $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
         r.data.data.map(i => {
             $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)
@@ -363,7 +363,7 @@ let showEc = async (r, year, data) => {
     var Y = $("#year").val()
     parameter = 'ec';
     if (Y == year) {
-        let r2 = await axios.get(url + "/form_gw/get/rank_ec/" + year).then(r => {
+        let r2 = await axios.get("/form_gw/get/rank_ec/" + year).then(r => {
             var a = r.data.data
             var b = []
             for (var i = 0; i < st_all.length; i++) {
@@ -380,7 +380,7 @@ let showEc = async (r, year, data) => {
         })
 
     } else {
-        let r2 = await axios.get(url + "/form_gw/get/rank_ec/2563").then(r => {
+        let r2 = await axios.get("/form_gw/get/rank_ec/2563").then(r => {
             var a = r.data.data
             var b = []
             for (var i = 0; i < st_all.length; i++) {
@@ -398,7 +398,7 @@ let showEc = async (r, year, data) => {
 
     }
     // else {
-    //     let r2 = await axios.get(url + "/form_gw/get/rank_ec/2563").then(r => {
+    //     let r2 = await axios.get( "/form_gw/get/rank_ec/2563").then(r => {
     //         var a = r.data.data
     //         var b = []
     //         a.map(i => {
@@ -433,7 +433,7 @@ let showPh = async (r, year, data) => {
     let st_all = data;
     parameter = 'ph';
     if (Y == year) {
-        let r2 = await axios.get(url + "/form_gw/get/rank_ph/" + year).then(r => {
+        let r2 = await axios.get("/form_gw/get/rank_ph/" + year).then(r => {
             var a = r.data.data
             var b = []
             for (var i = 0; i < st_all.length; i++) {
@@ -450,7 +450,7 @@ let showPh = async (r, year, data) => {
         })
 
     } else {
-        let r2 = await axios.get(url + "/form_gw/get/rank_ph/").then(r => {
+        let r2 = await axios.get("/form_gw/get/rank_ph/").then(r => {
             var a = r.data.data
             var b = []
             for (var i = 0; i < st_all.length; i++) {
@@ -783,7 +783,7 @@ function Marker(data) {
             markers.addLayer(marker);
             marker.on("click", g => {
                 let sta_id = data[i].staid
-                axios.get(url+'/api/underWater/' + sta_id).then((r) => {
+                axios.get(url + '/api/underWater/' + sta_id).then((r) => {
                     let res = r.data.data[0]
                     // console.log(res)
                     $("#location").text('')
@@ -912,7 +912,7 @@ let getData_Tab = async (r) => {
     staname_t = "\nตำบล" + r[0].tambon + "\nอำเภอ" + r[0].amphoe + "\nจังหวัด" + r[0].prov
     document.getElementById('sta_name2').innerHTML = staname_t;
     // console.log(sen)
-    let res = await axios.get(url + "/form_gw/get-api").then((r) => {
+    let res = await axios.get("/form_gw/get-api").then((r) => {
         let res2 = r.data.data.filter(e => e.staid == sta_id)
         if (sen.length == 1) {
             //กลุ่ม 1 sensor1

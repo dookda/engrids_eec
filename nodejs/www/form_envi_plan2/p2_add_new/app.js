@@ -135,7 +135,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     console.log(obj);
-    axios.post(url + "/projmon2-api/insertdata_new", obj).then((r) => {
+    axios.post("/projmon2-api/insertdata_new", obj).then((r) => {
         r.data.data == "success" ? refreshPage() : null
     })
     return false;

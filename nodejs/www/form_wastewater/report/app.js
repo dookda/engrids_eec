@@ -16,7 +16,7 @@ let gotoLogin = () => {
     location.href = "./../../form_register/login/index.html";
 }
 
-var L62 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__62_w_system_eec&maxFeatures=50&outputFormat=application%2Fjson'
+var L62 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__62_w_system_eec&maxFeatures=50&outputFormat=application%2Fjson'
 
 $(document).ready(() => {
     if (urid) {
@@ -55,7 +55,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -64,7 +64,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -73,29 +73,29 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
     // maxZoom: 10,
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
-const wsystemeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const wsystemeec = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__62_w_system_eec',
     format: 'image/png',
     transparent: true
 });
-const wpipeeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const wpipeeec = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__63_w_pipe_eec',
     format: 'image/png',
     transparent: true
 });
-const wscopeeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const wscopeeec = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__64_w_scope_eec',
     format: 'image/png',
     transparent: true,
 });
-const pollution = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pollution = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__81_pollution_group',
     format: 'image/png',
     transparent: true,
@@ -200,7 +200,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let w_id = $("#projId").val()
-    axios.post(url + "/waste-api/delete", { w_id: w_id }).then(r => {
+    axios.post("/waste-api/delete", { w_id: w_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })
@@ -226,7 +226,7 @@ $("#chartdiv").hide()
 let getChart = (w_id) => {
     // console.log(w_id);
     let obj = { w_id: w_id }
-    axios.post(url + "/waste-api/getone", obj).then((r) => {
+    axios.post("/waste-api/getone", obj).then((r) => {
         $("#chartdiv").show()
 
         // if (r.data.data[0].geojson) {
@@ -666,7 +666,7 @@ let callChart = (insti) => {
     // console.log(insti);
     // let build = document.getElementById("buildlist").value;
     // document.getElementById("sourcename").innerHTML = insti;
-    axios.post(url + '/waste-api/getdatabymun', { insti: insti }).then(r => {
+    axios.post('/waste-api/getdatabymun', { insti: insti }).then(r => {
         let dat = [];
         let i = r.data.data[0];
         dat.push({ "cat": "อาคารชุด/บ้านพัก", "val": i.no_house ? Number(i.no_house) * 500 : 0 });
@@ -714,7 +714,7 @@ let layermark = (Url, Nlayer) => {
 
 let getMunlist = (muni) => {
     $("#urbanlist").empty().append(`<option value="eec">เลือกเทศบาล</option>`);
-    axios.get(url + "/waste-api/getmun/" + muni).then(r => {
+    axios.get("/waste-api/getmun/" + muni).then(r => {
         // console.log(r);
         if (muni == 'ทุกจังหวัด') {
             r.data.data.map(i => $("#urbanlist").append(`<option value="${i.insti}">${i.insti}</option>`));
@@ -774,7 +774,7 @@ $("#station").on("change", function () {
 })
 
 let checkdata = async () => {
-    await axios.post(url + '/waste-api/getownerdata', { prov: 'ทุกจังหวัด', usrid: urid }).then(r => {
+    await axios.post('/waste-api/getownerdata', { prov: 'ทุกจังหวัด', usrid: urid }).then(r => {
         let d = r.data.data
         if (f_wastewater == 'false') {
             $("#noauth").modal("show")

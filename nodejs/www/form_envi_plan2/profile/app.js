@@ -16,7 +16,7 @@ $("#organize").on("change", function () {
 })
 
 let getData = (uid) => {
-    axios.post(url + "/login-api/getprofile", { uid }).then(r => {
+    axios.post("/login-api/getprofile", { uid }).then(r => {
         console.log(r.data.data);
         document.getElementById("usrname").value = r.data.data[0].usrname;
         document.getElementById("pass").value = r.data.data[0].pass;
@@ -43,7 +43,7 @@ let update = () => {
     }
     console.log(obj);
 
-    axios.post(url + "/login-api/updateprofile", obj).then(r => {
+    axios.post("/login-api/updateprofile", obj).then(r => {
         r.data.data == "success" ? getData(uid) : console.log(r);
         $("#modal").modal('show');
     })

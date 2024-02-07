@@ -28,28 +28,28 @@ let usr = urid;
 
 let get_eat_plant_list = () => {
     $("#eat_plant_list").empty()
-    axios.post(url + "/ff-api/geteatlist", { ftype: "พืชกินได้" }).then(r => {
+    axios.post("/ff-api/geteatlist", { ftype: "พืชกินได้" }).then(r => {
         r.data.data.map(i => $("#eat_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
     })
 }
 
 let get_use_plant_list = () => {
     $("#use_plant_list").empty()
-    axios.post(url + "/ff-api/geteatlist", { ftype: "พืชใช้สอย" }).then(r => {
+    axios.post("/ff-api/geteatlist", { ftype: "พืชใช้สอย" }).then(r => {
         r.data.data.map(i => $("#use_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
     })
 }
 
 let get_econ_plant_list = () => {
     $("#econ_plant_list").empty()
-    axios.post(url + "/ff-api/geteatlist", { ftype: "พืชเศรษฐกิจ" }).then(r => {
+    axios.post("/ff-api/geteatlist", { ftype: "พืชเศรษฐกิจ" }).then(r => {
         r.data.data.map(i => $("#econ_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
     })
 }
 
 let get_herb_plant_list = () => {
     $("#herb_plant_list").empty()
-    axios.post(url + "/ff-api/geteatlist", { ftype: "พืชสมุนไพร" }).then(r => {
+    axios.post("/ff-api/geteatlist", { ftype: "พืชสมุนไพร" }).then(r => {
         r.data.data.map(i => $("#herb_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
     })
 }
@@ -76,7 +76,7 @@ let postEat = async () => {
             ftype: "พืชกินได้",
             fplant: i
         }
-        axios.post(url + "/ff-api/deleteplant", obj).then(
+        axios.post("/ff-api/deleteplant", obj).then(
             // () => console.log("พืชกินได้ ok")
         );
     })
@@ -93,7 +93,7 @@ let postUse = async () => {
             ftype: "พืชใช้สอย",
             fplant: i
         }
-        axios.post(url + "/ff-api/deleteplant", obj).then(
+        axios.post("/ff-api/deleteplant", obj).then(
             // () => console.log("พืชใช้สอย ok")
         );
     })
@@ -109,7 +109,7 @@ let postEcon = async () => {
             ftype: "พืชเศรษฐกิจ",
             fplant: i
         }
-        axios.post(url + "/ff-api/deleteplant", obj).then(
+        axios.post("/ff-api/deleteplant", obj).then(
             // () => console.log("พืชเศรษฐกิจ ok")
         );
     })
@@ -125,7 +125,7 @@ let postHerb = async () => {
             ftype: "พืชสมุนไพร",
             fplant: i
         }
-        axios.post(url + "/ff-api/deleteplant", obj).then(
+        axios.post("/ff-api/deleteplant", obj).then(
             // () => console.log("พืชสมุนไพร ok")
         );
     })

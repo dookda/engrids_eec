@@ -15,7 +15,7 @@ let gotoLogin = () => {
     location.href = "./../../form_register/login/index.html";
 }
 
-var L79 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__79_stationwaste_eec&maxFeatures=50&outputFormat=application%2Fjson'
+var L79 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__79_stationwaste_eec&maxFeatures=50&outputFormat=application%2Fjson'
 $(document).ready(async () => {
     if (urid) {
         await checkdata();
@@ -53,7 +53,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -62,7 +62,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -71,7 +71,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -79,12 +79,12 @@ const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const classtrasheec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const classtrasheec = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__78_classtrash_eec',
     format: 'image/png',
     transparent: true,
 });
-// const stationwasteeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const stationwasteeec = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__79_stationwaste_eec',
 //     format: 'image/png',
 //     transparent: true,
@@ -172,7 +172,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let gb_id = $("#projId").val()
-    axios.post(url + "/gb-api/delete", { gb_id: gb_id }).then(r => {
+    axios.post("/gb-api/delete", { gb_id: gb_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })
@@ -245,7 +245,7 @@ function getChart(gb_id) {
     let obj = {
         gb_id: gb_id
     }
-    axios.post(url + "/gb-api/getone", obj).then((r) => {
+    axios.post("/gb-api/getone", obj).then((r) => {
         $("#chartdiv").show();
         $("#year").text(`ปี ${r.data.data[0].year}`);
         if (r.data.data[0].prov == "24") {
@@ -716,7 +716,7 @@ let getstation = (Pcode) => {
     else {
         $("#sta").empty().append(`<option value="staall">ทุกอปท.</option>`);
     }
-    axios.post(url + `/gb-api/getstation/user`, { prov: Pcode, userid: urid }).then(r => {
+    axios.post(`/gb-api/getstation/user`, { prov: Pcode, userid: urid }).then(r => {
         var data = r.data.data.filter(e => e.dla !== null);
         if (Pcode == 'eec') {
             data.map(i => {
@@ -749,7 +749,7 @@ function getChart2(dla) {
     let obj = {
         sta: dla
     }
-    axios.post(url + "/gb-api/getonebysta", obj).then((r) => {
+    axios.post("/gb-api/getonebysta", obj).then((r) => {
         // console.log(r.data.data)
         $("#chartdiv").hide();
         $("#year").text(`ปี ${r.data.data[0].year}`);
@@ -784,7 +784,7 @@ function getChart2(dla) {
 }
 
 let checkdata = async () => {
-    await axios.post(url + '/gb-api/getownerdata/', { usrid: urid }).then(r => {
+    await axios.post('/gb-api/getownerdata/', { usrid: urid }).then(r => {
         let d = r.data.data
         if (f_garbage == 'false') {
             $("#noauth").modal("show")

@@ -143,7 +143,7 @@ function insertData() {
         }
     }
     // console.log(obj.data);
-    axios.post(url + "/waste-api/insert", obj).then((r) => {
+    axios.post("/waste-api/insert", obj).then((r) => {
         // console.log(r.data.data);
         $('#insti').val("");
         $('#prov').val("");

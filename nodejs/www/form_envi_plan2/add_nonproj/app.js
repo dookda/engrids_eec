@@ -39,7 +39,7 @@ $("#prj_measure").change(i => {
 })
 
 let getActivity = (prj_measure) => {
-    axios.post(url + "/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
+    axios.post("/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
         // console.log(r);
         $("#list_measure").empty()
         r.data.data.map((i, k) => {
@@ -74,7 +74,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     console.log(obj);
-    axios.post(url + "/projmon-api/insertnonprojdata", obj).then((r) => {
+    axios.post("/projmon-api/insertnonprojdata", obj).then((r) => {
         r.data.data == "success" ? refreshPage() : null
     })
     return false;

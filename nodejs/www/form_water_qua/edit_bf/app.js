@@ -107,7 +107,7 @@ let loadData = () => {
         wq_id: wq_id,
         tb: "watquality_af"
     }
-    axios.post(url + "/wq-api/getone", obj).then(r => {
+    axios.post("/wq-api/getone", obj).then(r => {
         // console.log(r.data.data[0]);
         $('#wq_turb').val(r.data.data[0].bf_wq_turb)
         $('#wq_cond').val(r.data.data[0].bf_wq_cond)
@@ -171,7 +171,7 @@ let saveData = () => {
         wq_id: wq_id,
     }
     // console.log(obj);
-    axios.post(url + "/wq-api/update", obj).then(r => {
+    axios.post("/wq-api/update", obj).then(r => {
         r.data.data == "success" ? refreshPage() : null
     })
 }

@@ -128,7 +128,7 @@ $("#typedata").on('change', function () {
 let gettype = (type) => {
     $("#typedata").empty().append(`<option value="eec">เลือกประเภทข้อมูล</option>`);
     if (type !== 'eec') {
-        axios.post(url + `/forecast_eec/${type}/type`).then(r => {
+        axios.post(`/forecast_eec/${type}/type`).then(r => {
             if (type !== 'water_demand') {
                 r.data.data.map(i => {
                     $("#typedata").append(`<option value="${i.title_c}">${i.title_n}</option>`)
@@ -166,7 +166,7 @@ let getunit = (type) => {
     // $('#unit_ry').text(dtype)
     // $('#unit_eec').text(dtype)
     if (dtype !== 'eec') {
-        axios.post(url + `/forecast_eec/${dtype}/unit`, { code: type }).then(r => {
+        axios.post(`/forecast_eec/${dtype}/unit`, { code: type }).then(r => {
             let d = r.data.data
             unit = d[0].unit_n
             r.data.data.map(i => {

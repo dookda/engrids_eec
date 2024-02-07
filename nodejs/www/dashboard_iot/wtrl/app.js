@@ -1,8 +1,8 @@
 const url = "https://engrids.soc.cmu.ac.th/api";
 // const url = 'http://localhost:3700';
-const eecGeoserver = "https://engrids.soc.cmu.ac.th/geoserver";
+const eecGeoserver = "/geoserver";
 
-// axios.post(url + "/eec-api/iot-data-example", { token: 'ZWVjSW9UYnlFbkdSSURzU3RhdGlvbjE=' }).then(r => {
+// axios.post( "/eec-api/iot-data-example", { token: 'ZWVjSW9UYnlFbkdSSURzU3RhdGlvbjE=' }).then(r => {
 //     console.log(r);
 // })
 
@@ -18,7 +18,7 @@ let showChart = (typ, unit, dat) => {
                 load: function () {
                     var series = this.series[0];
                     setInterval(async () => {
-                        axios.get(url + '/eec-api/iot-data-bytype/' + typ).then((r) => {
+                        axios.get('/eec-api/iot-data-bytype/' + typ).then((r) => {
                             // console.log(r);
                             let x = (new Date()).getTime();
                             // let x = Number(r.data.data[0].ts * 1000)
@@ -101,7 +101,7 @@ let showChart = (typ, unit, dat) => {
     })
 }
 
-axios.get(url + "/eec-api/iot-data-bytype-last20/rangd").then(async (r) => {
+axios.get("/eec-api/iot-data-bytype-last20/rangd").then(async (r) => {
     let data = [];
     let time = (new Date()).getTime();
     r.data.data.map((j, k) => {
@@ -113,7 +113,7 @@ axios.get(url + "/eec-api/iot-data-bytype-last20/rangd").then(async (r) => {
     showChart("rangd", "meter", data)
 })
 
-axios.get(url + "/eec-api/iot-data-bytype-last20/bmehumi").then(async (r) => {
+axios.get("/eec-api/iot-data-bytype-last20/bmehumi").then(async (r) => {
     let data = [];
     let time = (new Date()).getTime();
     r.data.data.map((j, k) => {
@@ -125,7 +125,7 @@ axios.get(url + "/eec-api/iot-data-bytype-last20/bmehumi").then(async (r) => {
     showChart("bmehumi", "%", data)
 })
 
-axios.get(url + "/eec-api/iot-data-bytype-last20/bmealti").then(async (r) => {
+axios.get("/eec-api/iot-data-bytype-last20/bmealti").then(async (r) => {
     let data = [];
     let time = (new Date()).getTime();
     r.data.data.map((j, k) => {
@@ -137,7 +137,7 @@ axios.get(url + "/eec-api/iot-data-bytype-last20/bmealti").then(async (r) => {
     showChart("bmealti", "meter", data)
 })
 
-axios.get(url + "/eec-api/iot-data-bytype-last20/bmepres").then(async (r) => {
+axios.get("/eec-api/iot-data-bytype-last20/bmepres").then(async (r) => {
     let data = [];
     let time = (new Date()).getTime();
     r.data.data.map((j, k) => {
@@ -149,7 +149,7 @@ axios.get(url + "/eec-api/iot-data-bytype-last20/bmepres").then(async (r) => {
     showChart("bmepres", "Pa", data)
 })
 
-axios.get(url + "/eec-api/iot-data-bytype-last20/bmetemp").then(async (r) => {
+axios.get("/eec-api/iot-data-bytype-last20/bmetemp").then(async (r) => {
     let data = [];
     let time = (new Date()).getTime();
     r.data.data.map((j, k) => {

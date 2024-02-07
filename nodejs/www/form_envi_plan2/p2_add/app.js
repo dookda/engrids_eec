@@ -77,7 +77,7 @@ let refreshPage = () => {
 }
 
 let getPrjcate = () => {
-    axios.post(url + "/projmon2-api/prj_cate").then(r => {
+    axios.post("/projmon2-api/prj_cate").then(r => {
         $("#prj_mac").empty();
         $("#prj_plan").empty();
         $("#prj_name").empty();
@@ -89,7 +89,7 @@ let getPrjcate = () => {
 }
 
 let getPrjmac = (prj_cate) => {
-    axios.post(url + "/projmon2-api/prj_mac", { prj_cate }).then(r => {
+    axios.post("/projmon2-api/prj_mac", { prj_cate }).then(r => {
         $("#prj_mac").empty();
         $("#prj_plan").empty();
         $("#prj_name").empty();
@@ -101,7 +101,7 @@ let getPrjmac = (prj_cate) => {
 }
 
 let getPrjplan = (prj_mac) => {
-    axios.post(url + "/projmon2-api/prj_plan", { prj_mac }).then(r => {
+    axios.post("/projmon2-api/prj_plan", { prj_mac }).then(r => {
         $("#prj_plan").empty();
         $("#prj_name").empty();
         $("#prj_plan").append("<option></option>")
@@ -112,7 +112,7 @@ let getPrjplan = (prj_mac) => {
 }
 
 let getPrjname = (prj_plan) => {
-    axios.post(url + "/projmon2-api/prj_name", { prj_plan }).then(r => {
+    axios.post("/projmon2-api/prj_name", { prj_plan }).then(r => {
         $("#prj_name").empty();
         $("#prj_name").append("<option></option>");
         r.data.data.map(i => {
@@ -122,7 +122,7 @@ let getPrjname = (prj_plan) => {
 }
 
 let getProjtime = (prj_name) => {
-    axios.post(url + "/projmon2-api/prj_detail", { prj_name }).then(r => {
+    axios.post("/projmon2-api/prj_detail", { prj_name }).then(r => {
         r.data.data[0].plan_65 == 'TRUE' ? $("#plan_65").prop("checked", true) : $("#plan_65").prop("checked", false);
         r.data.data[0].plan_66 == 'TRUE' ? $("#plan_66").prop("checked", true) : $("#plan_66").prop("checked", false);
         r.data.data[0].plan_67 == 'TRUE' ? $("#plan_67").prop("checked", true) : $("#plan_67").prop("checked", false);
@@ -207,7 +207,7 @@ $("#prj_measure").change(i => {
 })
 
 let getActivity = (prj_measure) => {
-    axios.post(url + "/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
+    axios.post("/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
         // console.log(r);
         $("#list_measure").empty()
         r.data.data.map((i, k) => {
@@ -220,7 +220,7 @@ let getActivity = (prj_measure) => {
 }
 
 let getData = () => {
-    axios.get(url + "/login-api/getorg").then(r => {
+    axios.get("/login-api/getorg").then(r => {
         r.data.data.map(i => {
             $("#prj_operat").append(`<option value="${i.prj_operat}">${i.prj_operat}</option>`)
         })
@@ -299,7 +299,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     // console.log(obj);
-    axios.post(url + "/projmon-api/insertdata", obj).then((r) => {
+    axios.post("/projmon-api/insertdata", obj).then((r) => {
         r.data.data == "success" ? refreshPage() : null
     })
     return false;

@@ -8,9 +8,9 @@ if (eecauth !== "admin" && eecauth !== "user") {
     location.href = "./../../form_register/login/index.html";
 }
 
-var L68 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__68_complaint_pollu_cco&maxFeatures=50&outputFormat=application%2Fjson';
-var L69 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__69_complaint_pollu_cbi&maxFeatures=50&outputFormat=application%2Fjson';
-var L70 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__70_complaint_pollu_ryg&maxFeatures=50&outputFormat=application%2Fjson';
+var L68 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__68_complaint_pollu_cco&maxFeatures=50&outputFormat=application%2Fjson';
+var L69 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__69_complaint_pollu_cbi&maxFeatures=50&outputFormat=application%2Fjson';
+var L70 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__70_complaint_pollu_ryg&maxFeatures=50&outputFormat=application%2Fjson';
 $(document).ready(() => {
     loadTable()
     layermark(L68, 68)
@@ -45,7 +45,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -54,7 +54,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -63,7 +63,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -71,17 +71,17 @@ const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pollucco = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pollucco = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__68_complaint_pollu_cco',
     format: 'image/png',
     transparent: true,
 });
-const pollucbi = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pollucbi = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__69_complaint_pollu_cbi',
     format: 'image/png',
     transparent: true,
 });
-const polluryg = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const polluryg = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__70_complaint_pollu_ryg',
     format: 'image/png',
     transparent: true,
@@ -159,7 +159,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let proj_id = $("#projId").val()
-    axios.post(url + "/notice-api/delete", { proj_id: proj_id }).then(r => {
+    axios.post("/notice-api/delete", { proj_id: proj_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })

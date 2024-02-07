@@ -14,7 +14,7 @@ let gotoLogin = () => {
 }
 
 
-var L61 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__61_sea_eec&maxFeatures=50&outputFormat=application%2Fjson'
+var L61 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__61_sea_eec&maxFeatures=50&outputFormat=application%2Fjson'
 
 const url = "https://engrids.soc.cmu.ac.th/api";
 
@@ -44,7 +44,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -53,7 +53,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -62,7 +62,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -70,17 +70,17 @@ const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-// const seaeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const seaeec = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__61_sea_eec',
 //     format: 'image/png',
 //     transparent: true,
 // });
-const mangrovelu = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const mangrovelu = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__39_mangrovelu',
     format: 'image/png',
     transparent: true,
 });
-const pollution = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pollution = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__81_pollution_group',
     format: 'image/png',
     transparent: true,
@@ -246,7 +246,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let sq_id = $("#projId").val()
-    axios.post(url + "/sq-api/delete", { sq_id: sq_id }).then(r => {
+    axios.post("/sq-api/delete", { sq_id: sq_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })
@@ -257,7 +257,7 @@ function getChart(sq_id) {
     let obj = {
         sq_id: sq_id
     }
-    axios.post(url + "/sq-api/getone", obj).then((r) => {
+    axios.post("/sq-api/getone", obj).then((r) => {
         $("#chartdiv").show()
         // console.log(r.data.data[0]);
         geneChart([{ "cat": "ค่าดีโอ", "value": r.data.data[0].sq_do }], "sq_do", "ค่าดีโอ", "mg/L", 4, 10);
@@ -520,7 +520,7 @@ let getDataByPro = (code) => {
     let sq_ph = [];
     let sq_mwqi = [];
 
-    axios.post(url + "/sq-api/getsummarize", { sq_pro: sq_pro }).then(async (r) => {
+    axios.post("/sq-api/getsummarize", { sq_pro: sq_pro }).then(async (r) => {
         // console.log(r.data.data)
         await r.data.data.map(i => {
             sq_po43p.push({ cat: i.sq_date, dat: i.sq_po43p ? Number(i.sq_po43p) : null });
@@ -666,7 +666,7 @@ let lineChart = (div, data, label, unit, min1, max1, min2, max2,) => {
 
 
 let provStation = (prov) => {
-    axios.post(url + "/sq-api/getstation", { prov, type: eecauth }).then(r => {
+    axios.post("/sq-api/getstation", { prov, type: eecauth }).then(r => {
         // console.log(r);
         var data = r.data.data.filter(e => e.sta_loc !== null);
 
@@ -772,7 +772,7 @@ let callChart = () => {
     if (sta_n == "ทุกสถานีตรวจวัดค่า" && sq_pro !== "ทุกจังหวัด") {
         // $("#chartall").show();
         $('#staname').html(` ${parameter_n} ของจ.${sq_pro} `)
-        axios.post(url + "/sq-api/getsummarize", { sq_pro: sq_pro }).then(async (r) => {
+        axios.post("/sq-api/getsummarize", { sq_pro: sq_pro }).then(async (r) => {
             // console.log(r.data.data)
             await r.data.data.map(i => {
                 sq_po43p.push({ cat: i.sq_date, dat: i.sq_po43p ? Number(i.sq_po43p) : null });
@@ -796,7 +796,7 @@ let callChart = () => {
     } else if (sta_n !== "ทุกสถานีตรวจวัดค่า" && sq_pro !== "ทุกจังหวัด") {
         // $("#chartall").show();
         $('#staname').html(` ${parameter_n} ของสถานีตรวจวัด${sq_sta} จ.${sq_pro} `)
-        axios.post(url + "/sq-api/getdatabysta", { sta: sta_n, type: eecauth, usrid: urid }).then((r) => {
+        axios.post("/sq-api/getdatabysta", { sta: sta_n, type: eecauth, usrid: urid }).then((r) => {
             r.data.data.map(i => {
                 sq_po43p.push({ cat: i.sq_date, dat: i.sq_po43p ? Number(i.sq_po43p) : null });
                 sq_no3n.push({ cat: i.sq_date, dat: i.sq_no3n ? Number(i.sq_no3n) : null });
@@ -829,7 +829,7 @@ let zoomExtent = (lyr, code) => {
         }
     })
 
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         // console.log(r);
         let geom = JSON.parse(r.data.data[0].geom)
 

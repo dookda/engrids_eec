@@ -55,7 +55,7 @@ let loadMap = () => {
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
 
-    const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__03_tambon_eec",
         format: "image/png",
         transparent: true,
@@ -64,7 +64,7 @@ let loadMap = () => {
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__02_amphoe_eec",
         format: "image/png",
         transparent: true,
@@ -73,7 +73,7 @@ let loadMap = () => {
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__01_prov_eec",
         format: "image/png",
         transparent: true,
@@ -191,7 +191,7 @@ let deleteValue = () => {
     console.log($("#projId").val());
     let pid = $("#projId").val()
     if ($("#tbType").val() == "prj") {
-        axios.post(url + "/projmon2-api/delete_new", { pid }).then(r => {
+        axios.post("/projmon2-api/delete_new", { pid }).then(r => {
             if (r.data.data == "success") {
                 $('#editModal').modal('hide')
                 $('#deleteModal').modal('hide')

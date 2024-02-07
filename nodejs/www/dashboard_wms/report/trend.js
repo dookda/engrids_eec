@@ -78,31 +78,31 @@ let forecast = async () => {
     let pop_eec_T02 = []
     let pop_eec_T03 = []
     let pop_eec_T04 = []
-    await axios.post(url + "/forecast_eec/pop/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_pop_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_pop_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_pop_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop/year", { code: 'T04' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop/year", { code: 'T04' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_pop_T04.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop/data").then(async (r) => {
+    await axios.post("/forecast_eec/pop/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -182,25 +182,25 @@ let forecast = async () => {
     let popcovid_eec_T01 = []
     let popcovid_eec_T02 = []
     let popcovid_eec_T03 = []
-    await axios.post(url + "/forecast_eec/pop_covid/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop_covid/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_popcovid_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop_covid/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop_covid/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_popcovid_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop_covid/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/pop_covid/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_popcovid_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/pop_covid/data").then(async (r) => {
+    await axios.post("/forecast_eec/pop_covid/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -260,13 +260,13 @@ let forecast = async () => {
     // wastewater
     let year_wastewater_T01 = []
     let wastewater_eec_T01 = []
-    await axios.post(url + "/forecast_eec/wastewater/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/wastewater/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_wastewater_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/wastewater/data").then(async (r) => {
+    await axios.post("/forecast_eec/wastewater/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -290,13 +290,13 @@ let forecast = async () => {
     // garbage
     let year_garbage_T01 = []
     let garbage_eec_T01 = []
-    await axios.post(url + "/forecast_eec/garbage/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/garbage/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_garbage_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/garbage/data").then(async (r) => {
+    await axios.post("/forecast_eec/garbage/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -334,49 +334,49 @@ let forecast = async () => {
     let WD_eec_T04_2 = []
     let WD_eec_T04_3 = []
     let WD_eec_T05 = []
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T04' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T04' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T04.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T04_2' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T04_2' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T04_2.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T04_3' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T04_3' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T04_3.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/year", { code: 'T05' }).then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/year", { code: 'T05' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WD_T05.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/water_demand/data").then(async (r) => {
+    await axios.post("/forecast_eec/water_demand/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -537,25 +537,25 @@ let forecast = async () => {
     let UW_eec_T01 = []
     let UW_eec_T02 = []
     let UW_eec_T03 = []
-    await axios.post(url + "/forecast_eec/untreated_water/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/untreated_water/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_UW_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/untreated_water/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/untreated_water/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_UW_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/untreated_water/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/untreated_water/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_UW_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/untreated_water/data").then(async (r) => {
+    await axios.post("/forecast_eec/untreated_water/data").then(async (r) => {
         let data = r.data.data
         let eec_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "eec")
         let eec_T02 = r.data.data.filter(e => e.title_c == "T02" && e.prov_c == "eec")
@@ -590,25 +590,25 @@ let forecast = async () => {
     let ED_eec_T01 = []
     let ED_eec_T02 = []
     let ED_eec_T03 = []
-    await axios.post(url + "/forecast_eec/elec_demand/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/elec_demand/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_ED_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/elec_demand/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/elec_demand/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_ED_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/elec_demand/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/elec_demand/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_ED_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/elec_demand/data").then(async (r) => {
+    await axios.post("/forecast_eec/elec_demand/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -663,31 +663,31 @@ let forecast = async () => {
     let econ_eec_T02 = []
     let econ_eec_T03 = []
     let econ_eec_T04 = []
-    await axios.post(url + "/forecast_eec/econ/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/econ/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_econ_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/econ/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/econ/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_econ_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/econ/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/econ/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_econ_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/econ/year", { code: 'T04' }).then(async (r) => {
+    await axios.post("/forecast_eec/econ/year", { code: 'T04' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_econ_T04.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/econ/data").then(async (r) => {
+    await axios.post("/forecast_eec/econ/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -747,25 +747,25 @@ let forecast = async () => {
     let labor_eec_T01 = []
     let labor_eec_T02 = []
     let labor_eec_T03 = []
-    await axios.post(url + "/forecast_eec/labor/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_labor_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_labor_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_labor_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor/data").then(async (r) => {
+    await axios.post("/forecast_eec/labor/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")
@@ -831,43 +831,43 @@ let forecast = async () => {
     let LE_eec_T03 = []
     let LE_eec_T04 = []
     let LE_eec_T05 = []
-    await axios.post(url + "/forecast_eec/labor_edulevel/years").then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/years").then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_LE.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor_edulevel/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_LE_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor_edulevel/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_LE_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor_edulevel/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_LE_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor_edulevel/year", { code: 'T04' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/year", { code: 'T04' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_LE_T04.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor_edulevel/year", { code: 'T05' }).then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/year", { code: 'T05' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_LE_T05.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/labor_edulevel/data").then(async (r) => {
+    await axios.post("/forecast_eec/labor_edulevel/data").then(async (r) => {
         let data = r.data.data
         let eec_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "eec")
         let eec_T02 = r.data.data.filter(e => e.title_c == "T02" && e.prov_c == "eec")
@@ -938,25 +938,25 @@ let forecast = async () => {
     let WR_eec_T01 = []
     let WR_eec_T02 = []
     let WR_eec_T03 = []
-    await axios.post(url + "/forecast_eec/waste_raffle/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/waste_raffle/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WR_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/waste_raffle/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/waste_raffle/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WR_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/waste_raffle/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/waste_raffle/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_WR_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/waste_raffle/data").then(async (r) => {
+    await axios.post("/forecast_eec/waste_raffle/data").then(async (r) => {
         let data = r.data.data
         let eec_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "eec")
         let eec_T02 = r.data.data.filter(e => e.title_c == "T02" && e.prov_c == "eec")
@@ -1003,37 +1003,37 @@ let forecast = async () => {
     let gg_eec_T03 = []
     let gg_eec_T04 = []
     let gg_eec_T05 = []
-    await axios.post(url + "/forecast_eec/greenhouse_gas/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/greenhouse_gas/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_gg_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/greenhouse_gas/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/greenhouse_gas/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_gg_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/greenhouse_gas/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/greenhouse_gas/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_gg_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/greenhouse_gas/year", { code: 'T04' }).then(async (r) => {
+    await axios.post("/forecast_eec/greenhouse_gas/year", { code: 'T04' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_gg_T04.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/greenhouse_gas/year", { code: 'T05' }).then(async (r) => {
+    await axios.post("/forecast_eec/greenhouse_gas/year", { code: 'T05' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_gg_T05.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/greenhouse_gas/data").then(async (r) => {
+    await axios.post("/forecast_eec/greenhouse_gas/data").then(async (r) => {
         let data = r.data.data
         let eec_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "TH")
         let eec_T02 = r.data.data.filter(e => e.title_c == "T02" && e.prov_c == "TH")
@@ -1097,31 +1097,31 @@ let forecast = async () => {
     let lu_eec_T02 = []
     let lu_eec_T03 = []
     let lu_eec_T04 = []
-    await axios.post(url + "/forecast_eec/landuse/year", { code: 'T01' }).then(async (r) => {
+    await axios.post("/forecast_eec/landuse/year", { code: 'T01' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_lu_T01.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/landuse/year", { code: 'T02' }).then(async (r) => {
+    await axios.post("/forecast_eec/landuse/year", { code: 'T02' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_lu_T02.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/landuse/year", { code: 'T03' }).then(async (r) => {
+    await axios.post("/forecast_eec/landuse/year", { code: 'T03' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_lu_T03.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/landuse/year", { code: 'T04' }).then(async (r) => {
+    await axios.post("/forecast_eec/landuse/year", { code: 'T04' }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_lu_T04.push({ year: i.y_year })
         })
     })
-    await axios.post(url + "/forecast_eec/landuse/data").then(async (r) => {
+    await axios.post("/forecast_eec/landuse/data").then(async (r) => {
         let data = r.data.data
         let eec24_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "24")
         let eec20_T01 = r.data.data.filter(e => e.title_c == "T01" && e.prov_c == "20")

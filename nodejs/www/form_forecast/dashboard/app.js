@@ -38,7 +38,7 @@ $('#year').on("change", function () {
 let gettype = (type) => {
     $("#typedata").empty().append(`<option value="eec">เลือกประเภทข้อมูล</option>`);
     if (type !== 'eec') {
-        axios.post(url + `/forecast_eec/${type}/Ttype`).then(r => {
+        axios.post(`/forecast_eec/${type}/Ttype`).then(r => {
             r.data.data.map(i => {
                 $("#typedata").append(`<option value="${i.title_c}">${i.title_n}</option>`)
             })
@@ -144,7 +144,7 @@ let loadTable = (type, code) => {
     });
 
     $("#year").empty().append(`<option value="eec">เลือกปี</option>`);
-    axios.post(url + `/forecast_eec/${type}/Tyear`, { title_c: code }).then(r => {
+    axios.post(`/forecast_eec/${type}/Tyear`, { title_c: code }).then(r => {
         // console.log(r.data.data)
         r.data.data.map(i => {
             $("#year").append(`<option value="${i.y_year}">${i.y_year}</option>`)
@@ -192,7 +192,7 @@ let deleteValue = () => {
     let type = $("#D_type").val()
     let proj_id = $("#projId").val()
     // var url = "http://localhost:3000"
-    axios.post(url + `/forecast_eec/${type}/delete`, { id_data: proj_id }).then(r => {
+    axios.post(`/forecast_eec/${type}/delete`, { id_data: proj_id }).then(r => {
         r.data.data == "success" ? closeModal() : null;
         // window.location.reload();
         table.ajax.reload();

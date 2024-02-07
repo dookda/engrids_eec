@@ -29,7 +29,7 @@ const url = "https://engrids.soc.cmu.ac.th/api";
 let drawnItems = new L.FeatureGroup();
 
 let loadTable = () => {
-    axios.post(url + '/projmon-api/getdata', { org: org, typ: typ }).then(r => {
+    axios.post('/projmon-api/getdata', { org: org, typ: typ }).then(r => {
         let dat = r.data.data
         getProc_stat(dat, "chart3");
         getOpert_stat(dat, "chart5");
@@ -39,7 +39,7 @@ let loadTable = () => {
 }
 
 let loadTable2 = () => {
-    axios.post(url + '/projmon2-api/getallproj_new', { uid, typ }).then(r => {
+    axios.post('/projmon2-api/getallproj_new', { uid, typ }).then(r => {
         let dat = r.data.data
         getProc_stat(dat, "chart23");
         getOpert_stat(dat, "chart25");

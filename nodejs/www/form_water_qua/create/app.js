@@ -116,7 +116,7 @@ let insertData = () => {
             }
         }
 
-        axios.post(url + "/wq-api/createreport", obj).then(r => {
+        axios.post("/wq-api/createreport", obj).then(r => {
             // console.log(obj);
             if (r.data.data == "success") {
                 $('#report_n').val("")

@@ -113,7 +113,7 @@ function insertData() {
         }
     }
     // console.log(obj.data);
-    axios.post(url + "/sq-api/insert", obj).then((r) => {
+    axios.post("/sq-api/insert", obj).then((r) => {
         // console.log(r.data.data);
         $('#sq_spname').val("");
         $('#sq_date').val("");

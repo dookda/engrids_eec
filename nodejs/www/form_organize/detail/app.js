@@ -63,7 +63,7 @@ map.on('click', (e) => {
 
 let loadheadamp = (e) => {
     // console.log(e);
-    axios.get(url + "/eec-api/get-th-amp/" + e).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e).then(r => {
         $("#headamp").empty()
         $("#headtam").empty()
         $("#headamp").append(`<option value=""></option>`)
@@ -74,7 +74,7 @@ let loadheadamp = (e) => {
 }
 
 let loadheadtam = (e) => {
-    axios.get(url + "/eec-api/get-th-tam/" + e).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e).then(r => {
         // console.log(r);
         $("#headtam").empty()
         $("#headtam").append(`<option value=""></option>`)
@@ -85,7 +85,7 @@ let loadheadtam = (e) => {
 }
 
 let getAmp = (e) => {
-    axios.get(url + "/eec-api/get-th-amp/" + e).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e).then(r => {
         $("#amp").empty()
         $("#tam").empty()
         $("#amp").append(`<option value=""></option>`)
@@ -96,7 +96,7 @@ let getAmp = (e) => {
 }
 
 let getTam = (e) => {
-    axios.get(url + "/eec-api/get-th-tam/" + e).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e).then(r => {
         // console.log(r);
         $("#tam").empty()
         $("#tam").append(`<option value=""></option>`)
@@ -107,7 +107,7 @@ let getTam = (e) => {
 }
 
 let getTamOne = (e) => {
-    axios.get(url + "/eec-api/get-th-onetam/" + e).then(r => {
+    axios.get("/eec-api/get-th-onetam/" + e).then(r => {
         r.data.data.map(i => {
             // console.log(i);
             $("#pro_name").val(i.pro_name)
@@ -118,7 +118,7 @@ let getTamOne = (e) => {
 }
 
 let loadData = (orgid) => {
-    axios.post(url + "/org-api/getone", { orgid: orgid }).then(async r => {
+    axios.post("/org-api/getone", { orgid: orgid }).then(async r => {
         // console.log(r);
 
         loadheadamp(r.data.data[0].headpro)
@@ -293,7 +293,7 @@ let sendData = () => {
     }
 
     // console.log(obj);
-    axios.post(url + "/org-api/update", obj).then((r) => {
+    axios.post("/org-api/update", obj).then((r) => {
         r.data.data == "success" ? $("#okmodal").modal("show") : null
     })
     return false;

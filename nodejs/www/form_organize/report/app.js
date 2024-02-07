@@ -86,7 +86,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let orgid = $("#projId").val()
-    axios.post(url + "/org-api/delete", { orgid: orgid }).then(r => {
+    axios.post("/org-api/delete", { orgid: orgid }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }

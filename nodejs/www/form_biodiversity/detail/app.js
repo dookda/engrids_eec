@@ -93,7 +93,7 @@ map.on('click', (e) => {
     $("#lon").val(e.latlng.lng)
 });
 
-axios.post(url + "/biodiversity-api/getdataone", { proj_id: proj_id }).then(r => {
+axios.post("/biodiversity-api/getdataone", { proj_id: proj_id }).then(r => {
     // console.log(r);
     getAmp(r.data.data[0].pro);
     getTam(r.data.data[0].amp);
@@ -222,7 +222,7 @@ let sendData = () => {
         }
         // console.log(obj);
         if (geom != "") {
-            axios.post(url + "/biodiversity-api/update", obj).then((r) => {
+            axios.post("/biodiversity-api/update", obj).then((r) => {
                 r.data.data == "success" ? $("#okmodal").modal("show") : null;
                 sessionStorage.removeItem('biodiversity_proj_gid');
             })
@@ -243,7 +243,7 @@ let refreshPage = () => {
 }
 
 let getAmp = (e) => {
-    axios.get(url + "/eec-api/get-th-amp/" + e).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e).then(r => {
         $("#amp").empty()
         $("#tam").empty()
         $("#amp").append(`<option value=""></option>`)
@@ -254,7 +254,7 @@ let getAmp = (e) => {
 }
 
 let getTam = (e) => {
-    axios.get(url + "/eec-api/get-th-tam/" + e).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e).then(r => {
         // console.log(r);
         $("#tam").empty()
         $("#tam").append(`<option value=""></option>`)
@@ -265,7 +265,7 @@ let getTam = (e) => {
 }
 
 let getTamOne = (e) => {
-    axios.get(url + "/eec-api/get-th-onetam/" + e).then(r => {
+    axios.get("/eec-api/get-th-onetam/" + e).then(r => {
         r.data.data.map(i => {
             // console.log(i);
             $("#pro_name").val(i.pro_name)

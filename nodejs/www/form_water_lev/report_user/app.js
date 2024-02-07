@@ -36,7 +36,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -45,7 +45,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -54,14 +54,14 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
     // maxZoom: 10,
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
-const municiple = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const municiple = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__04_municiple',
     format: "image/png",
     transparent: true,
@@ -145,7 +145,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let proj_id = $("#projId").val()
-    axios.post(url + "/waterlevel-api/delete", { proj_id: proj_id }).then(r => {
+    axios.post("/waterlevel-api/delete", { proj_id: proj_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })
@@ -465,14 +465,14 @@ let zoomExtent = (lyr, code) => {
         }
     })
 
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
         map.fitBounds(polygon.getBounds());
     })
 }
 let getPro = (procode) => {
-    axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+    axios.get(`/eec-api/get-amp/${procode}`).then(r => {
         // console.log(r.data.data);
         $("#amp").empty().append(`<option value="eec">เลือกอำเภอ</option>`);
         $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
@@ -482,7 +482,7 @@ let getPro = (procode) => {
     })
 }
 let getAmp = (ampcode) => {
-    axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+    axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
         $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
         r.data.data.map(i => {
             $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)

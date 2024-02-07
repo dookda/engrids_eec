@@ -32,7 +32,7 @@ $('#loginForm').submit(function (e) {
         pass: $("#pass").val()
     }
     if ($("#usrname").val() && $("#pass").val()) {
-        axios.post(url + "/login-api/validate", obj).then(r => {
+        axios.post("/login-api/validate", obj).then(r => {
             // console.log(r.data.data);
             r.data.data.length > 0 ? gotoPage(r.data.data[0]) : $("#modal").modal('show');
         })

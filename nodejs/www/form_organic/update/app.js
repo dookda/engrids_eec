@@ -53,7 +53,7 @@ $("#tam").on("change", function () {
 });
 let prov_name, prov_code, amp_name, amp_code, tam_name, tam_code;
 let getPro = (procode) => {
-    axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+    axios.get(`/eec-api/get-amp/${procode}`).then(r => {
         // console.log(r.data.data);
         $("#amp").empty();
         $("#tam").empty();
@@ -74,14 +74,14 @@ let getPro = (procode) => {
     }
 }
 let getAmp = (ampcode) => {
-    axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+    axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
         $("#tam").empty();
         r.data.data.map(i => {
             $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)
         })
     })
 
-    axios.get(url + `/eec-api/get-amp/${prov_code}`).then(r => {
+    axios.get(`/eec-api/get-amp/${prov_code}`).then(r => {
         let data = r.data.data.filter(e => e.amphoe_idn == ampcode)
         amp_name = data[0].amp_namt
         amp_code = ampcode
@@ -89,7 +89,7 @@ let getAmp = (ampcode) => {
     })
 }
 let getTam = (tamcode) => {
-    axios.get(url + `/eec-api/get-tam/${amp_code}`).then(r => {
+    axios.get(`/eec-api/get-tam/${amp_code}`).then(r => {
         let data = r.data.data.filter(e => e.tambon_idn == tamcode)
         tam_name = data[0].tam_namt
         tam_code = tamcode
@@ -217,7 +217,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -226,7 +226,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -235,7 +235,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -561,7 +561,7 @@ let confirmDelete = (name, id_date, date, type) => {
     $('#projTime').text(`วันที่ ${date}`)
     $("#deleteModal").modal("show");
 
-    axios.post(url + "/insee-api/deletedata", { id_date: id_date }).then(r => {
+    axios.post("/insee-api/deletedata", { id_date: id_date }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }
@@ -569,7 +569,7 @@ let confirmDelete = (name, id_date, date, type) => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     // let projid = $("#projId").val();
-    // axios.post(url + "/insee-api/deletedata", { id_date: projid }).then(r => {
+    // axios.post( "/insee-api/deletedata", { id_date: projid }).then(r => {
     //     r.data.data == "success" ? closeModal() : null
     // })
     $('#deleteModal').modal('hide')
@@ -1036,7 +1036,7 @@ let zoommap = (lyr, code) => {
         }
     })
 
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
         map.fitBounds(polygon.getBounds());

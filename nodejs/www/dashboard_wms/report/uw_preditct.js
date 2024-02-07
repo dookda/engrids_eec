@@ -1,7 +1,7 @@
 const url = 'http://localhost:3700';
 
 let UW_prov_all = (code) => {
-    axios.post(url + "/predict_UW_industry/data/prov").then(async (r) => {
+    axios.post("/predict_UW_industry/data/prov").then(async (r) => {
         let arrData = []
         let data = r.data.data.filter(e => e.p_code == code);
         await data.map(i => {
@@ -33,7 +33,7 @@ let UW_prov_all = (code) => {
 }
 // UW_prov_all("eec20")
 let UW_prov = (code) => {
-    axios.post(url + "/predict_UW_industry/data/prov").then(async (r) => {
+    axios.post("/predict_UW_industry/data/prov").then(async (r) => {
         let arrData3 = []
         let data3 = r.data.data.filter(e => e.a_code == code);
         await data3.map(i => {
@@ -60,7 +60,7 @@ let UW_prov = (code) => {
     })
 }
 let UW_year = (pcode) => {
-    axios.post(url + "/predict_UW_industry/data/prov").then(async (r) => {
+    axios.post("/predict_UW_industry/data/prov").then(async (r) => {
         let arrData2 = []
         let data2 = r.data.data.filter(e => e.p_code == pcode);
         let year = $('#Y_industry').val();
@@ -296,7 +296,7 @@ let chart_UW_industrybyamp = (data, names, umit, divchart, color1, color2) => {
     // });
 }
 let UW_industrybyprov_all = () => {
-    axios.post(url + "/predict_UW_industry/data/prov").then(async (r) => {
+    axios.post("/predict_UW_industry/data/prov").then(async (r) => {
         let arrData1 = []
         let arrData2 = []
         let arrData3 = []
@@ -486,7 +486,7 @@ let change_UW_industrybyprov = (arrData, unit) => {
     });
 }
 let UW_industrybycate = async (code) => {
-    // axios.post(url + "/predict_UW_industry/data/cate").then(async (r) => {
+    // axios.post( "/predict_UW_industry/data/cate").then(async (r) => {
     //     let arrData1 = []
     //     let data1 = r.data.data.filter(e => e.category_code == code)
     //     data1.map(i => {
@@ -506,13 +506,13 @@ let UW_industrybycate = async (code) => {
     // })
     // console.log(code)
     let year_UW = []
-    await axios.post(url + "/forecast_eec/uw_industrybycate/year", { code: code }).then(async (r) => {
+    await axios.post("/forecast_eec/uw_industrybycate/year", { code: code }).then(async (r) => {
         let d = r.data.data
         d.map(i => {
             year_UW.push({ year: i.y_year })
         })
     })
-    axios.post(url + "/forecast_eec/uw_industrybycate/data").then(async (r) => {
+    axios.post("/forecast_eec/uw_industrybycate/data").then(async (r) => {
         let arrData1 = []
         let data1 = r.data.data.filter(e => e.title_c == code)
         year_UW.map(i => {
@@ -755,7 +755,7 @@ $("#A_industry").on("change", function () {
 });
 
 let getPro = (procode) => {
-    axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+    axios.get(`/eec-api/get-amp/${procode}`).then(r => {
         $("#A_industry").empty();
         if (procode == "eec") {
             $("#A_industry").empty().append(`<option value="eec">ทุกอำเภอ</option>`);
@@ -772,7 +772,7 @@ let getPro = (procode) => {
 }
 let getCate = () => {
     $("#C_industry").empty().append(`<option value="T21">ภาพรวม</option>`);
-    axios.post(url + "/forecast_eec/uw_industrybycate/type").then(async (r) => {
+    axios.post("/forecast_eec/uw_industrybycate/type").then(async (r) => {
         let data = r.data.data.filter(e => e.title_c !== "T21")
         data.map(i => {
             $("#C_industry").append(`<option value="${i.title_c}">${i.title_n}</option>`)

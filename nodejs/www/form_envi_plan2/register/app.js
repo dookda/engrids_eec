@@ -15,7 +15,7 @@ $("#organize").on("change", function () {
 
 
 let getData = () => {
-    axios.get(url + "/login-api/getorg").then(r => {
+    axios.get("/login-api/getorg").then(r => {
         r.data.data.map(i => {
             $("#organize").append(`<option value="${i.prj_operat}">${i.prj_operat}</option>`)
         })
@@ -25,7 +25,7 @@ let getData = () => {
 getData();
 
 let getProject = () => {
-    axios.get(url + "/login-api/getplan2_project").then(r => {
+    axios.get("/login-api/getplan2_project").then(r => {
         r.data.data.map(i => {
             // console.log(i.assign);
             $("#assign").append(`<hr><input type="checkbox" name="${i.pid}" id="${i.pid}" onchange="getSelect()">
@@ -61,7 +61,7 @@ $('#loginForm').submit(function (e) {
 
     if ($("#usrname").val() && $("#pass").val()) {
         // console.log(obj);
-        axios.post(url + "/login-api/insert", obj).then(r => {
+        axios.post("/login-api/insert", obj).then(r => {
             r.data.data == "success" ? login() : console.log(r);
         })
     } else {

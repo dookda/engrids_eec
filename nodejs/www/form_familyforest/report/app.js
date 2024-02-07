@@ -61,7 +61,7 @@ function loadMap() {
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
 
-    const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__03_tambon_eec",
         format: "image/png",
         transparent: true,
@@ -70,7 +70,7 @@ function loadMap() {
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__02_amphoe_eec",
         format: "image/png",
         transparent: true,
@@ -79,7 +79,7 @@ function loadMap() {
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__01_prov_eec",
         format: "image/png",
         transparent: true,
@@ -141,7 +141,7 @@ var urlmap
 // } else {
 //     urlmap = url + "/ff-api/getparcel/uid";
 let loadready = () => {
-    axios.post(url + "/ff-api/getparcel/uid", { usrid: urid }).then(r => {
+    axios.post("/ff-api/getparcel/uid", { usrid: urid }).then(r => {
         console.log(r.data.data)
         r.data.data.map(i => {
             if (i.geom) {
@@ -386,7 +386,7 @@ let confirmAdd = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let gid = $("#projId").val()
-    axios.post(url + "/ff-api/delete", { gid: gid }).then(r => {
+    axios.post("/ff-api/delete", { gid: gid }).then(r => {
         if (r.data.data == "success") {
             $('#deleteModal').modal('hide')
             $('#myTable').DataTable().ajax.reload();
@@ -396,7 +396,7 @@ let deleteValue = () => {
 }
 
 let checkdata = () => {
-    axios.post(url + '/ff-api/getdaily/', { usrid: urid }).then(r => {
+    axios.post('/ff-api/getdaily/', { usrid: urid }).then(r => {
         let d = r.data.data
         if (f_familyforest == 'false') {
             $("#noauth").modal("show")

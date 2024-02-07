@@ -106,7 +106,7 @@ function insertData() {
         }
     }
     // console.log(obj.data);
-    axios.post(url + "/gb-api/insert", obj).then((r) => {
+    axios.post("/gb-api/insert", obj).then((r) => {
         refreshPage()
     })
     return false;

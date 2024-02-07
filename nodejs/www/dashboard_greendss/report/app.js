@@ -78,7 +78,7 @@ const gter = L.tileLayer('https://{s}.google.com/vt/lyrs=t,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tempanual = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tempanual = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:rain_anual.tif",
     name: "lyr",
     format: "image/png",
@@ -86,7 +86,7 @@ const tempanual = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/w
     zIndex: 2
 });
 
-const ecobound = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const ecobound = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__82_landscape",
     name: "lyr",
     format: "image/png",
@@ -94,7 +94,7 @@ const ecobound = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wm
     zIndex: 2
 });
 
-const lu = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const lu = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__46_lu_eec_61",
     name: "lyr",
     format: "image/png",
@@ -102,14 +102,14 @@ const lu = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
     zIndex: 1
 });
 
-const green = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const green = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__52_gr_park",
     name: "lyr",
     format: "image/png",
     transparent: true,
     zIndex: 1
 });
-const green2 = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const green2 = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__52_gsus_muni",
     name: "lyr",
     format: "image/png",
@@ -117,7 +117,7 @@ const green2 = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?
     zIndex: 1
 });
 
-const muni = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const muni = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__04_municiple",
     name: "lyr",
     format: "image/png",
@@ -125,7 +125,7 @@ const muni = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?",
     zIndex: 3
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     name: "lyr",
     format: "image/png",
@@ -134,7 +134,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=22 OR pro_code=23 OR pro_code=24 OR pro_code=25 OR pro_code=26 OR pro_code=27'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     name: "lyr",
     format: "image/png",
@@ -143,7 +143,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=22 OR pro_code=23 OR pro_code=24 OR pro_code=25 OR pro_code=26 OR pro_code=27'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     name: "lyr",
     format: "image/png",
@@ -152,7 +152,7 @@ const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=22 OR pro_code=23 OR pro_code=24 OR pro_code=25 OR pro_code=26 OR pro_code=27'
 });
 
-const pcontrol = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pcontrol = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__06_pollution_control",
     name: "lyr",
     format: "image/png",
@@ -160,34 +160,34 @@ const pcontrol = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wm
     zIndex: 1
 });
 
-const vill = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const vill = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__05_village",
     name: "lyr",
     format: "image/png",
     transparent: true,
     zIndex: 2
 });
-const maintran = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const maintran = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__49_maintran",
     name: "lyr",
     format: "image/png",
     transparent: true
 });
 
-const tran = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tran = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__49_tran",
     name: "lyr",
     format: "image/png",
     transparent: true
 });
 
-const highway = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const highway = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__49_highway",
     name: "lyr",
     format: "image/png",
     transparent: true
 });
-const thaigreen = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const thaigreen = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__83_thaigreen_eec',
     name: "lyr",
     format: "image/png",
@@ -198,7 +198,7 @@ const thaigreen = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/w
 
 let lyrs = L.featureGroup().addTo(map)
 
-let eecUrl = "https://engrids.soc.cmu.ac.th/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
+let eecUrl = "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
 // let rtiUrl = "https://rti2dss.com:8443/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=";
 
 $("#greenLegend").attr("src", eecUrl + "eec:a__52_gr_park");
@@ -256,7 +256,7 @@ map.on('pm:create', async e => {
     var size = map.getSize();
     var bbox = map.getBounds().toBBoxString();
 
-    let aqiUrl = "https://engrids.soc.cmu.ac.th/geoserver/wms?SERVICE=WMS" +
+    let aqiUrl = "/geoserver/wms?SERVICE=WMS" +
         "&VERSION=1.1.1&REQUEST=GetFeatureInfo" +
         "&QUERY_LAYERS=eec:ndvi_mosaic_202101.tif,eec:temp_3hour.tif" +
         "&LAYERS=eec:ndvi_mosaic_202101.tif,eec:temp_3hour.tif" +
@@ -403,7 +403,7 @@ for (let i = 1; i <= yweek[1]; i++) {
     // add legend
     $("#temp_w" + i + "Legend").attr("src", `${eecUrl}eec:rain_w${i}.tif`);
     // add layer
-    lyr[`temp_w${i}`] = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    lyr[`temp_w${i}`] = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: `eec:temp_w${i}.tif`,
         name: "templyr",
         format: "image/png",
@@ -432,7 +432,7 @@ let getDetail = (e) => {
     location.href = "./../detail/index.html";
 }
 
-let responseWeather = axios.get(url + '/eec-api/get-weather-3hr-all');
+let responseWeather = axios.get('/eec-api/get-weather-3hr-all');
 let loadMeteo = async () => {
     let iconblue = L.icon({
         iconUrl: './marker-meteo/location-pin-blue.svg',
@@ -532,8 +532,8 @@ let loadMeteo = async () => {
 // let markerAQI = L.featureGroup();
 let markerAQI = L.layerGroup();
 let loadAQI = async () => {
-    let response = axios.get(url + '/eec-api/get-aqi');
-    let responseAll = axios.get(url + '/eec-api/get-aqi-all');
+    let response = axios.get('/eec-api/get-aqi');
+    let responseAll = axios.get('/eec-api/get-aqi-all');
 
     let iconblue = L.icon({
         iconUrl: './marker/location-pin-blue.svg',
@@ -766,7 +766,7 @@ let getFeatureInfo = async (e) => {
     var pnt = map.latLngToContainerPoint(e.latlng);
     var size = map.getSize()
     var bbox = map.getBounds().toBBoxString()
-    let urlWeek = "https://engrids.soc.cmu.ac.th/geoserver/wms?SERVICE=WMS" +
+    let urlWeek = "/geoserver/wms?SERVICE=WMS" +
         "&VERSION=1.1.1&REQUEST=GetFeatureInfo" +
         "&QUERY_LAYERS=" + tempLyr +
         "&LAYERS=" + tempLyr +
@@ -793,7 +793,7 @@ let getFeatureInfo = async (e) => {
         hchart(dat)
     })
 
-    let urlฺTemp3Hour = "https://engrids.soc.cmu.ac.th/geoserver/wms?SERVICE=WMS" +
+    let urlฺTemp3Hour = "/geoserver/wms?SERVICE=WMS" +
         "&VERSION=1.1.1&REQUEST=GetFeatureInfo" +
         "&QUERY_LAYERS=eec:temp_3hour.tif" +
         "&LAYERS=eec:temp_3hour.tif" +
@@ -815,7 +815,7 @@ let getFeatureInfo = async (e) => {
     });
 
     // console.log(e.latlng);
-    await axios.post(url + "/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+    await axios.post("/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
         // console.log(r.data.data);
         if (r.data.data.length > 0) {
             $("#landuse").html(`การใช้ประโยชน์: <span class="badge bg-warning" style="font-size:14px;">${r.data.data[0].lu_des_th}</span> จำนวน: <span class="badge bg-warning" style="font-size:14px;">${(r.data.data[0].area / 1600).toFixed(2)} </span> ไร่`)
@@ -826,7 +826,7 @@ let getFeatureInfo = async (e) => {
         }
     })
 
-    await axios.post(url + "/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+    await axios.post("/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
         // console.log(r.data.data);
         if (r.data.data.length > 0) {
             $("#hloc").html(`${r.data.data[0].tam_nam_t} 

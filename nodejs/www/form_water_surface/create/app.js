@@ -132,7 +132,7 @@ let insertData = () => {
         }
     }
     // console.log(obj.data);
-    axios.post(url + "/ws-api/insert", obj).then((r) => {
+    axios.post("/ws-api/insert", obj).then((r) => {
         // console.log(r.data.data);
         $("#ws_station").val("");
         $("#ws_location").val("");

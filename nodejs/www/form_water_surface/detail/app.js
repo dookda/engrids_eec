@@ -53,7 +53,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -62,7 +62,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -71,7 +71,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -108,7 +108,7 @@ map.on('click', (e) => {
     }).addTo(map);
 });
 
-axios.post(url + "/ws-api/getone", { ws_id: ws_id }).then(r => {
+axios.post("/ws-api/getone", { ws_id: ws_id }).then(r => {
     $("#ws_station").val(r.data.data[0].ws_station)
     $("#ws_location").val(r.data.data[0].ws_location)
     $("#ws_river").val(r.data.data[0].ws_river)
@@ -278,7 +278,7 @@ let sendData = () => {
         }
         // console.log(obj.data);
         if (geom != "") {
-            axios.post(url + "/ws-api/update", obj).then((r) => {
+            axios.post("/ws-api/update", obj).then((r) => {
                 r.data.data == "success" ? $("#okmodal").modal("show") : null
                 sessionStorage.removeItem('ws_id');
             })

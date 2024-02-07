@@ -32,7 +32,7 @@ $('#btnAccept').click(() => {
 })
 
 const url = "https://engrids.soc.cmu.ac.th/api";
-const eecGeoserver = "https://engrids.soc.cmu.ac.th/geoserver/eec/wms?";
+const eecGeoserver = "/geoserver/eec/wms?";
 
 let latlng = {
     lat: 13.205567,
@@ -157,7 +157,7 @@ const pollu = L.tileLayer.wms(eecGeoserver, {
 
 let lyrs = L.featureGroup().addTo(map)
 
-let eecUrl = "https://engrids.soc.cmu.ac.th/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
+let eecUrl = "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
 // let rtiUrl = "https://rti2dss.com:8443/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=";
 
 
@@ -755,7 +755,7 @@ var dataqi1, dataqi2, dataqi3,
 
 let getFeatureInfo = async (aqiLyr, lyrLen, pnt, size, bbox, div, param, std, dataid, Mark) => {
     // $("#aqidiv").show();
-    let aqiUrl = "https://engrids.soc.cmu.ac.th/geoserver/wms?SERVICE=WMS" +
+    let aqiUrl = "/geoserver/wms?SERVICE=WMS" +
         "&VERSION=1.1.1&REQUEST=GetFeatureInfo" +
         "&QUERY_LAYERS=" + aqiLyr +
         "&LAYERS=" + aqiLyr +
@@ -1289,7 +1289,7 @@ map.on("click", async (e) => {
         so2chk ? getFeatureInfo(so2Lyr, lyrLen, pnt, size, bbox, "so2chart", "SO2 (ppb)", 106, "data1") : null;
         no2chk ? getFeatureInfo(no2Lyr, lyrLen, pnt, size, bbox, "no2chart", "NO2 (ppb)", 200, "data1") : null;
         // console.log(e.latlng);
-        await axios.post(url + "/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+        await axios.post("/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
             // console.log(r.data.data);
             if (r.data.data.length > 0) {
                 $("#landuse").html(`การใช้ประโยชน์: <span class="badge bg-warning" style="font-size:14px;">${r.data.data[0].lu_des_th}</span> จำนวน: <span class="badge bg-warning" style="font-size:14px;">${(r.data.data[0].area / 1600).toFixed(2)} </span> ไร่`)
@@ -1300,7 +1300,7 @@ map.on("click", async (e) => {
             }
         })
 
-        await axios.post(url + "/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+        await axios.post("/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
             // console.log(r.data.data);
             if (r.data.data.length > 0) {
                 $("#hloc").html(`${r.data.data[0].tam_nam_t} 
@@ -1345,7 +1345,7 @@ map.on("click", async (e) => {
         so2chk ? getFeatureInfo(so2Lyr, lyrLen, pnt, size, bbox, "so2chart", "SO2 (ppb)", 106, "data2") : null;
         no2chk ? getFeatureInfo(no2Lyr, lyrLen, pnt, size, bbox, "no2chart", "NO2 (ppb)", 200, "data2") : null;
         // console.log(e.latlng);
-        await axios.post(url + "/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+        await axios.post("/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
             // console.log(r.data.data);
             if (r.data.data.length > 0) {
                 $("#landuse2").html(`การใช้ประโยชน์: <span class="badge bg-warning" style="font-size:14px;">${r.data.data[0].lu_des_th}</span> จำนวน: <span class="badge bg-warning" style="font-size:14px;">${(r.data.data[0].area / 1600).toFixed(2)} </span> ไร่`)
@@ -1355,7 +1355,7 @@ map.on("click", async (e) => {
                 $("#landuse2").hide();
             }
         })
-        await axios.post(url + "/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+        await axios.post("/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
             // console.log(r.data.data);
             if (r.data.data.length > 0) {
                 $("#hloc2").html(`${r.data.data[0].tam_nam_t} 
@@ -1397,7 +1397,7 @@ map.on("click", async (e) => {
         so2chk ? getFeatureInfo(so2Lyr, lyrLen, pnt, size, bbox, "so2chart", "SO2 (ppb)", 106, "data3") : null;
         no2chk ? getFeatureInfo(no2Lyr, lyrLen, pnt, size, bbox, "no2chart", "NO2 (ppb)", 200, "data3") : null;
         // console.log(e.latlng);
-        await axios.post(url + "/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+        await axios.post("/eec-api/get-landuse-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
             // console.log(r.data.data);
             if (r.data.data.length > 0) {
                 $("#landuse3").html(`การใช้ประโยชน์: <span class="badge bg-warning" style="font-size:14px;">${r.data.data[0].lu_des_th}</span> จำนวน: <span class="badge bg-warning" style="font-size:14px;">${(r.data.data[0].area / 1600).toFixed(2)} </span> ไร่`)
@@ -1408,7 +1408,7 @@ map.on("click", async (e) => {
             }
         })
 
-        await axios.post(url + "/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
+        await axios.post("/eec-api/get-tam-info", { lat: e.latlng.lat, lon: e.latlng.lng }).then(r => {
             // console.log(r.data.data);
             if (r.data.data.length > 0) {
                 $("#hloc3").html(`${r.data.data[0].tam_nam_t} 
@@ -1931,8 +1931,8 @@ $("#staaqi").click(function () {
 })
 let markerAQI = L.layerGroup();
 let loadAQI = async () => {
-    let response = axios.get(url + '/eec-api/get-aqi');
-    let responseAll = axios.get(url + '/eec-api/get-aqi-all');
+    let response = axios.get('/eec-api/get-aqi');
+    let responseAll = axios.get('/eec-api/get-aqi-all');
 
     let iconblue = L.icon({
         iconUrl: './marker/location-pin-blue.svg',

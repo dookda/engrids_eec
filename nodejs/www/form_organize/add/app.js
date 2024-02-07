@@ -178,7 +178,7 @@ let sendData = () => {
             }
         }
         // console.log(obj);
-        axios.post(url + "/org-api/insert", obj).then((r) => {
+        axios.post("/org-api/insert", obj).then((r) => {
             r.data.data == "success" ? $("#okmodal").modal("show") : null
         })
     }
@@ -259,7 +259,7 @@ let getAmp = (e) => {
         map.fitBounds(a.getBounds());
     })
 
-    axios.get(url + "/eec-api/get-th-amp/" + e).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e).then(r => {
         $("#amp").empty();
         $("#tam").empty();
         $("#amp").append(`<option value=""></option>`)
@@ -281,7 +281,7 @@ let getTam = (e) => {
         map.fitBounds(a.getBounds());
     })
 
-    axios.get(url + "/eec-api/get-th-tam/" + e).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e).then(r => {
         // console.log(r);
         $("#tam").empty();
         $("#tam").append(`<option value=""></option>`);
@@ -303,7 +303,7 @@ let getTamOne = (e) => {
         map.fitBounds(a.getBounds());
     })
 
-    axios.get(url + "/eec-api/get-th-onetam/" + e).then(r => {
+    axios.get("/eec-api/get-th-onetam/" + e).then(r => {
         r.data.data.map(i => {
             console.log(i);
             $("#pro_name").val(i.pro_name);
@@ -316,7 +316,7 @@ let getTamOne = (e) => {
 
 $("#headpro").change(e => {
     // console.log(e.target.value);
-    axios.get(url + "/eec-api/get-th-amp/" + e.target.value).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e.target.value).then(r => {
         $("#headamp").empty()
         $("#headtam").empty()
         $("#headamp").append(`<option value=""></option>`)
@@ -327,7 +327,7 @@ $("#headpro").change(e => {
 })
 
 $("#headamp").change(e => {
-    axios.get(url + "/eec-api/get-th-tam/" + e.target.value).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e.target.value).then(r => {
 
         console.log(r);
         $("#headtam").empty()

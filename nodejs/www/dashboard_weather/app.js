@@ -45,10 +45,10 @@ let map = L.map("map", {
 
 // const url = "https://engrids.soc.cmu.ac.th/api";
 const url = 'http://localhost';
-const eecGeoserver = "https://engrids.soc.cmu.ac.th/geoserver/eec/wms?";
-const eecGeoserverWFS = "https://engrids.soc.cmu.ac.th/geoserver";
+const eecGeoserver = "/geoserver/eec/wms?";
+const eecGeoserverWFS = "/geoserver";
 
-var L53 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__53_9w_reser63_3p&maxFeatures=50&outputFormat=application%2Fjson'
+var L53 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__53_9w_reser63_3p&maxFeatures=50&outputFormat=application%2Fjson'
 $(document).ready(() => {
   layermark(L53, 53)
   $("#amp").empty().append(`<option value="eec">เลือกอำเภอ</option>`);
@@ -308,7 +308,7 @@ let zoomExtent = async (lyr, code) => {
     }
   })
 
-  await axios.get(url + `/eec-api/get-bound/${lyr}/${code}`).then(r => {
+  await axios.get(`/eec-api/get-bound/${lyr}/${code}`).then(r => {
     let geom = JSON.parse(r.data.data[0].geom)
     // console.log(r.data.data[0].geom)
     var polygon = L.geoJson(geom, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
@@ -320,7 +320,7 @@ let zoomExtent = async (lyr, code) => {
 }
 
 let getPro = (procode) => {
-  axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+  axios.get(`/eec-api/get-amp/${procode}`).then(r => {
     // console.log(r.data.data);
     $("#amp").empty().append(`<option value="eec">เลือกอำเภอ</option>`);
     $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
@@ -331,7 +331,7 @@ let getPro = (procode) => {
 }
 
 let getAmp = (ampcode) => {
-  axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+  axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
     $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
     r.data.data.map(i => {
       $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)
@@ -394,9 +394,9 @@ let getparameter = (r) => {
   }
 }
 
-let response = axios.get(url + '/eec-api/get-weather-3hr');
-let responseAll = axios.get(url + '/eec-api/get-weather-3hr-all');
-let wtrlUrl = axios.get(url + '/eec-api/get-wtrl')
+let response = axios.get('/eec-api/get-weather-3hr');
+let responseAll = axios.get('/eec-api/get-weather-3hr-all');
+let wtrlUrl = axios.get('/eec-api/get-wtrl')
 
 let rmLyr = () => {
   map.eachLayer(lyr => {
@@ -407,7 +407,7 @@ let rmLyr = () => {
 }
 
 let nearData = async (e) => {
-  let res = await axios.post(url + '/eec-api/get-weather-near', { geom: e.latlng });
+  let res = await axios.post('/eec-api/get-weather-near', { geom: e.latlng });
   // console.log(res.data);
   $("#d").text(res.data.data[0].date_);
   $("#t").text(res.data.data[0].time_);
@@ -628,7 +628,7 @@ let showRain = async () => {
   rmLyr()
 
   // let d = await response;
-  axios.post(url + '/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
+  axios.post('/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
     let datArr = [];
     let d = r.data.data
     let prov = $("#pro").val();
@@ -766,7 +766,7 @@ let showPressure = async () => {
   $('#Hc_p').text('ความกดอากาศ')
   rmLyr()
 
-  axios.post(url + '/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
+  axios.post('/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
     let datArr = [];
     let d = r.data.data
     let prov = $("#pro").val();
@@ -874,7 +874,7 @@ let showTemp = async () => {
   $('#Hc_p').text('ค่าอุณหภูมิ')
   rmLyr()
 
-  axios.post(url + '/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
+  axios.post('/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
     let datArr = [];
     let d = r.data.data
     let prov = $("#pro").val();
@@ -998,7 +998,7 @@ let showRh = async () => {
   $('#Hc_p').text('ความชื้น')
   rmLyr()
 
-  axios.post(url + '/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
+  axios.post('/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
     let datArr = [];
     let d = r.data.data
     let prov = $("#pro").val();
@@ -1102,7 +1102,7 @@ let showWind = async () => {
   rmLyr()
   // let d = await response;
   // $("#datetime").text(`วันที่ ${resp[0].date_} เวลา ${resp[0].time_} น.`)
-  axios.post(url + '/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
+  axios.post('/eec-api/get-weather-3hr-bytam', { col: "pro", val: "eec" }).then(r => {
     let datArr = [];
     let d = r.data.data
     let prov = $("#pro").val();
@@ -1497,7 +1497,7 @@ pressureChart = async (data) => {
 
 let showChart = async (e) => {
   // console.log(e);
-  let res = await axios.post(url + '/eec-api/get-weather-hist', { sta_num: e.sta_num });
+  let res = await axios.post('/eec-api/get-weather-hist', { sta_num: e.sta_num });
 
   let rainfall = [];
   let temperature = [];
@@ -2158,7 +2158,7 @@ let getsta_3 = (data) => {
 $('#cardWtrl').hide();
 $('#sta_name3').on('change', async function () {
   if (this.value !== 'eec') {
-    let res = await axios.post(url + '/eec-api/get-wtrl/timeline', { staname: this.value });
+    let res = await axios.post('/eec-api/get-wtrl/timeline', { staname: this.value });
     let lo = dataTable2.filter(e => e.tele_station_name == this.value);
     let location = `${lo[0].tam_nam_t} ${lo[0].amp_nam_t} ${lo[0].prov_nam_t}`
     $("#locat_W").show();

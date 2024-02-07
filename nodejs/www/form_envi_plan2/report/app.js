@@ -155,7 +155,7 @@ let deleteValue = () => {
     // console.log($("#projId").val());
     let prj_id = $("#projId").val()
     if ($("#tbType").val() == "prj") {
-        axios.post(url + "/projmon-api/deletedata", { prj_id: prj_id }).then(r => {
+        axios.post("/projmon-api/deletedata", { prj_id: prj_id }).then(r => {
             if (r.data.data == "success") {
                 $('#editModal').modal('hide')
                 $('#deleteModal').modal('hide')
@@ -165,7 +165,7 @@ let deleteValue = () => {
     }
 
     if ($("#tbType").val() == "nonprj") {
-        axios.post(url + "/projmon-api/deletedatanonprj", { prj_id: prj_id }).then(r => {
+        axios.post("/projmon-api/deletedatanonprj", { prj_id: prj_id }).then(r => {
             if (r.data.data == "success") {
                 $('#editModal').modal('hide')
                 $('#deleteModal').modal('hide')

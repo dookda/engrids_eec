@@ -54,21 +54,21 @@ function loadMap() {
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
         lyrname: "bmap"
     });
-    const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__03_tambon_eec",
         format: "image/png",
         transparent: true,
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__02_amphoe_eec",
         format: "image/png",
         transparent: true,
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__01_prov_eec",
         format: "image/png",
         transparent: true,
@@ -130,19 +130,19 @@ map.on("pm:create", e => {
     geom = e.layer.toGeoJSON();
 });
 
-axios.post(url + "/ff-api/geteatlist", { ftype: "พืชกินได้" }).then(r => {
+axios.post("/ff-api/geteatlist", { ftype: "พืชกินได้" }).then(r => {
     r.data.data.map(i => $("#eat_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
 })
 
-axios.post(url + "/ff-api/geteatlist", { ftype: "พืชใช้สอย" }).then(r => {
+axios.post("/ff-api/geteatlist", { ftype: "พืชใช้สอย" }).then(r => {
     r.data.data.map(i => $("#use_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
 })
 
-axios.post(url + "/ff-api/geteatlist", { ftype: "พืชเศรษฐกิจ" }).then(r => {
+axios.post("/ff-api/geteatlist", { ftype: "พืชเศรษฐกิจ" }).then(r => {
     r.data.data.map(i => $("#econ_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
 })
 
-axios.post(url + "/ff-api/geteatlist", { ftype: "พืชสมุนไพร" }).then(r => {
+axios.post("/ff-api/geteatlist", { ftype: "พืชสมุนไพร" }).then(r => {
     r.data.data.map(i => $("#herb_plant_list").append(`<option value="${i.fplant}" >${i.fplant}</option>`))
 })
 
@@ -228,7 +228,7 @@ let postData = async () => {
             fplant: i,
             ffid: ffid
         }
-        axios.post(url + "/ff-api/insert", obj).then(
+        axios.post("/ff-api/insert", obj).then(
             // () => console.log("พืชกินได้ ok")
         );
     })
@@ -239,7 +239,7 @@ let postData = async () => {
             fplant: i,
             ffid: ffid
         }
-        axios.post(url + "/ff-api/insert", obj).then(
+        axios.post("/ff-api/insert", obj).then(
             // () => console.log("พืชใช้สอย ok")
         );
     })
@@ -250,7 +250,7 @@ let postData = async () => {
             fplant: i,
             ffid: ffid
         }
-        axios.post(url + "/ff-api/insert", obj).then(
+        axios.post("/ff-api/insert", obj).then(
             // () => console.log("พืชเศรษฐกิจ ok")
         );
     })
@@ -261,7 +261,7 @@ let postData = async () => {
             fplant: i,
             ffid: ffid
         }
-        axios.post(url + "/ff-api/insert", obj).then(
+        axios.post("/ff-api/insert", obj).then(
             // () => console.log("พืชสมุนไพร ok")
         );
     })
@@ -280,7 +280,7 @@ let postData = async () => {
             img: dataurl
         }
     }
-    await axios.post(url + "/ff-api/insert-regis", datObj).then(() => $("#okmodal").modal("show"));
+    await axios.post("/ff-api/insert-regis", datObj).then(() => $("#okmodal").modal("show"));
 }
 
 let gotoDaily = () => {

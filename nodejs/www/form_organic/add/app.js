@@ -67,7 +67,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -76,7 +76,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -85,7 +85,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -176,7 +176,7 @@ $("#tam").on("change", function () {
 });
 let prov_name, prov_code, amp_name, amp_code, tam_name, tam_code;
 let getPro = (procode) => {
-    axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+    axios.get(`/eec-api/get-amp/${procode}`).then(r => {
         // console.log(r.data.data);
         $("#amp").empty();
         $("#tam").empty();
@@ -194,7 +194,7 @@ let getPro = (procode) => {
     }
 }
 let getAmp = (ampcode) => {
-    axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+    axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
         $("#tam").empty();
         r.data.data.map(i => {
             $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)
@@ -203,14 +203,14 @@ let getAmp = (ampcode) => {
         tam_name = r.data.data[0].tam_namt
     })
 
-    axios.get(url + `/eec-api/get-amp/${prov_code}`).then(r => {
+    axios.get(`/eec-api/get-amp/${prov_code}`).then(r => {
         let data = r.data.data.filter(e => e.amphoe_idn == ampcode)
         amp_name = data[0].amp_namt
         amp_code = ampcode
     })
 }
 let getTam = (tamcode) => {
-    axios.get(url + `/eec-api/get-tam/${amp_code}`).then(r => {
+    axios.get(`/eec-api/get-tam/${amp_code}`).then(r => {
         let data = r.data.data.filter(e => e.tambon_idn == tamcode)
         tam_name = data[0].tam_namt
         tam_code = tamcode
@@ -282,7 +282,7 @@ function addrowtab(dataA, dataB, dataC) {
 //     }
 //     console.log(obj);
 //     if (geom.length > 0) {
-//         axios.post(url + "/agi-api/insert", obj).then((r) => {
+//         axios.post( "/agi-api/insert", obj).then((r) => {
 //             r.data.data == "success" ? $("#okmodal").modal("show") : null
 //         })
 //     } else {

@@ -41,7 +41,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -50,7 +50,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -59,7 +59,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -139,10 +139,10 @@ var MIcon3 = L.icon({
     // popupAnchor: [10, 0]
 });
 
-var L53 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__53_9w_reser63_3p&maxFeatures=50&outputFormat=application%2Fjson'
-var L58 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__58_water_mnre&maxFeatures=50&outputFormat=application%2Fjson'
-var L59 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__59_water_onep&maxFeatures=50&outputFormat=application%2Fjson'
-var L60 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__60_water_stand_eec&maxFeatures=50&outputFormat=application%2Fjson'
+var L53 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__53_9w_reser63_3p&maxFeatures=50&outputFormat=application%2Fjson'
+var L58 = '/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__58_water_mnre&maxFeatures=50&outputFormat=application%2Fjson'
+var L59 = '/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__59_water_onep&maxFeatures=50&outputFormat=application%2Fjson'
+var L60 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__60_water_stand_eec&maxFeatures=50&outputFormat=application%2Fjson'
 
 
 axios.get(L58).then((r) => {
@@ -256,7 +256,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let ws_id = $("#projId").val()
-    axios.post(url + "/ws-api/delete", { ws_id: ws_id }).then(r => {
+    axios.post("/ws-api/delete", { ws_id: ws_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })
@@ -394,7 +394,7 @@ let zoomExtent = (lyr, code) => {
         }
     })
 
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
         map.fitBounds(polygon.getBounds());
@@ -608,7 +608,7 @@ let geneChart = (arr, div, tt, unit, unit2, min, max, value) => {
 // let getStation = (prov) => {
 //     $("#sta").empty();
 //     $("#sta").append(`<option>เลือก</option>`);
-//     axios.post(url + "/ws-api/getstation", { prov }).then(r => {
+//     axios.post( "/ws-api/getstation", { prov }).then(r => {
 //         r.data.data.map(i => $("#sta").append(`<option value="${i.ws_station}">${i.ws_river} (${i.ws_station})</option>`))
 //     })
 // }
@@ -654,7 +654,7 @@ let getChart = (ws_id) => {
     let obj = {
         ws_id: ws_id
     }
-    axios.post(url + "/ws-api/getone", obj).then((r) => {
+    axios.post("/ws-api/getone", obj).then((r) => {
         // console.log(r);
         $("#staname").text(r.data.data[0].ws_station);
         $("#date").text(r.data.data[0].date)
@@ -743,7 +743,7 @@ let ws_tcb = [];
 
 $("#sta").on("change", function () {
     // console.log(this.value);
-    axios.post(url + "/ws-api/getstationone", { ws_station: this.value }).then(r => {
+    axios.post("/ws-api/getstationone", { ws_station: this.value }).then(r => {
         ws_wqi = [];
         ws_bod = [];
         ws_do = [];
@@ -870,7 +870,7 @@ let hidechart = () => {
 }
 
 let checkdata = async (prov) => {
-    axios.post(url + '/ws-api/getownerdata', prov).then(r => {
+    axios.post('/ws-api/getownerdata', prov).then(r => {
         let d = r.data.data
         if (f_water_surface == 'false') {
             $("#noauth").modal("show")
@@ -886,7 +886,7 @@ let checkdata = async (prov) => {
 }
 
 let getsta = (data) => {
-    axios.post(url + '/ws-api/getownerdata', data).then(r => {
+    axios.post('/ws-api/getownerdata', data).then(r => {
         let d = r.data.data
         // console.log(d)
         $("#sta").empty().append(`<option value="eec">เลือกสถานี/จุดตรวจวัด</option>`);

@@ -96,7 +96,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let proj_id = $("#projId").val()
-    axios.post(url + "/notice-api/delete", { proj_id: proj_id }).then(r => {
+    axios.post("/notice-api/delete", { proj_id: proj_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }

@@ -7,10 +7,10 @@ urid ? null : location.href = "./../../form_register/login/index.html";
 if (eecauth !== "admin" && eecauth !== "office") {
     location.href = "./../../form_register/login/index.html";
 }
-var L53 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__53_9w_reser63_3p&maxFeatures=50&outputFormat=application%2Fjson'
-var L58 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__58_water_mnre&maxFeatures=50&outputFormat=application%2Fjson'
-var L59 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__59_water_onep&maxFeatures=50&outputFormat=application%2Fjson'
-var L60 = 'https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__60_water_stand_eec&maxFeatures=50&outputFormat=application%2Fjson'
+var L53 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__53_9w_reser63_3p&maxFeatures=50&outputFormat=application%2Fjson'
+var L58 = '/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__58_water_mnre&maxFeatures=50&outputFormat=application%2Fjson'
+var L59 = '/geoserver/eec/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=eec%3Aa__59_water_onep&maxFeatures=50&outputFormat=application%2Fjson'
+var L60 = '/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=eec%3Aa__60_water_stand_eec&maxFeatures=50&outputFormat=application%2Fjson'
 
 $(document).ready(() => {
     loadTable({ type: "prov", dat: 'ทุกจังหวัด' })
@@ -48,7 +48,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -57,7 +57,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -66,7 +66,7 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
@@ -74,19 +74,19 @@ const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-// const watermnre = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const watermnre = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__58_water_mnre',
 //     name: "lyr",
 //     format: 'image/png',
 //     transparent: true,
 // });
-// const wateronep = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const wateronep = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__59_water_onep',
 //     name: "lyr",
 //     format: 'image/png',
 //     transparent: true,
 // });
-// const waterstandeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const waterstandeec = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__60_water_stand_eec',
 //     name: "lyr",
 //     format: 'image/png',
@@ -173,7 +173,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let ws_id = $("#projId").val()
-    axios.post(url + "/ws-api/delete", { ws_id: ws_id }).then(r => {
+    axios.post("/ws-api/delete", { ws_id: ws_id }).then(r => {
         r.data.data == "success" ? closeModal() : null
         $('#myTable').DataTable().ajax.reload();
     })
@@ -221,7 +221,7 @@ let getChart = (ws_id) => {
     let obj = {
         ws_id: ws_id
     }
-    axios.post(url + "/ws-api/getone", obj).then((r) => {
+    axios.post("/ws-api/getone", obj).then((r) => {
         // console.log(r);
         $("#staname").text(r.data.data[0].ws_station);
         $("#date").text(r.data.data[0].date)
@@ -480,7 +480,7 @@ let geneChart = (arr, div, tt, unit, min, max, value) => {
 
 
 let getStation = () => {
-    axios.get(url + "/ws-api/getstation").then(r => {
+    axios.get("/ws-api/getstation").then(r => {
         // console.log(r);
         r.data.data.map(i => $("#sta").append(`<option value="${i.ws_station}">${i.ws_river} (${i.ws_station})</option>`))
     })
@@ -518,7 +518,7 @@ let callChart = () => {
     if (sta == "ทุกสถานีตรวจวัดค่า") {
         chartstaall()
     } else {
-        axios.post(url + "/ws-api/getstationone", { ws_station: sta }).then(async r => {
+        axios.post("/ws-api/getstationone", { ws_station: sta }).then(async r => {
             // console.log(r);
             await r.data.data.map(i => {
 
@@ -655,9 +655,9 @@ let Dws_fcb = [];
 let Dws_nh3n = [];
 let Dws_tcb = [];
 let setall_dat = () => {
-    axios.get(url + "/ws-api/getstation").then(r => {
+    axios.get("/ws-api/getstation").then(r => {
         r.data.data.map(i =>
-            axios.post(url + '/ws-api/getstationone', { ws_station: i.ws_station }).then(r => {
+            axios.post('/ws-api/getstationone', { ws_station: i.ws_station }).then(r => {
                 console.log(r.data.data)
                 var data = r.data.data
                 var length = data.length - 1
@@ -927,7 +927,7 @@ let zoomExtent = (lyr, code) => {
             map.removeLayer(lyr)
         }
     })
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
         map.fitBounds(polygon.getBounds());
@@ -940,7 +940,7 @@ let zoomExtent = (lyr, code) => {
 }
 
 let zoommap2 = (sta) => {
-    axios.post(url + '/ws-api/getdata', { staid: sta }).then((r) => {
+    axios.post('/ws-api/getdata', { staid: sta }).then((r) => {
         var dat = r.data.data
         dat.map(i => {
             if (i.geojson !== null && sta !== "ทุกสถานีตรวจวัดค่า") {

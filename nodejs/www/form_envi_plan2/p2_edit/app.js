@@ -152,7 +152,7 @@ $("#prj_measure").change(i => {
 })
 
 let getActivity = (prj_measure) => {
-    axios.post(url + "/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
+    axios.post("/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
         $("#list_measure").empty()
         r.data.data.map((i, k) => {
             $("#list_measure").append(`<li>${i.prj_detail}</li>
@@ -164,7 +164,7 @@ let getActivity = (prj_measure) => {
 
 
 let getData = () => {
-    axios.post(url + "/projmon2-api/getdetail", { gid }).then(r => {
+    axios.post("/projmon2-api/getdetail", { gid }).then(r => {
         console.log(r.data.data);
         document.getElementById("prj_cate").value = r.data.data[0].prj_cate;
         document.getElementById("prj_mac").value = r.data.data[0].prj_mac;
@@ -257,7 +257,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     // console.log(obj);
-    axios.post(url + "/projmon2-api/updatedata", obj).then((r) => {
+    axios.post("/projmon2-api/updatedata", obj).then((r) => {
         r.data.data == "success" ? refreshPage() : null
     })
     return false;

@@ -51,7 +51,7 @@ let sendData = () => {
         usrname: $("#usrname").val(),
         pass: $("#password").val()
     }
-    axios.post(url + "/profile-api/userlogin", obj).then(r => {
+    axios.post("/profile-api/userlogin", obj).then(r => {
 
         console.log(r.data);
         if (r.data.data.length > 0) {
@@ -95,7 +95,7 @@ let resetEmail = () => {
 
 let gotoResetpass = () => {
     let obj = { email: $("#existemail").val() }
-    axios.post(url + "/profile-api/resetmail", obj).then(r => {
+    axios.post("/profile-api/resetmail", obj).then(r => {
         console.log(r);
         $("#resetemail").modal('hide');
         $("#responsemodal").modal('show');

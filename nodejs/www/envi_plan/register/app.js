@@ -15,7 +15,7 @@ $("#organize").on("change", function () {
 
 
 let getData = () => {
-    axios.get(url + "/login-api/getorg").then(r => {
+    axios.get("/login-api/getorg").then(r => {
         // console.log(r.data.data);
         // $("#organize").append(`<option ></option>`)
         r.data.data.map(i => {
@@ -39,7 +39,7 @@ $('#loginForm').submit(function (e) {
     }
     if ($("#usrname").val() && $("#pass").val()) {
         // console.log(obj);
-        axios.post(url + "/login-api/insert", obj).then(r => {
+        axios.post("/login-api/insert", obj).then(r => {
             r.data.data == "success" ? login() : console.log(r);
         })
     } else {

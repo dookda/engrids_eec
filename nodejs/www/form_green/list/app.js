@@ -82,7 +82,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let orgid = $("#projId").val()
-    axios.post(url + "/green-api/delete", { orgid: orgid }).then(r => {
+    axios.post("/green-api/delete", { orgid: orgid }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }
@@ -95,7 +95,7 @@ let getChart = (ws_id) => {
     let obj = {
         ws_id: ws_id
     }
-    axios.post(url + "/ws-api/getone", obj).then((r) => {
+    axios.post("/ws-api/getone", obj).then((r) => {
         // console.log(r);
         $("#staname").text(r.data.data[0].ws_station)
         $("#charttitle").show()

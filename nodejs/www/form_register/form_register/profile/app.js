@@ -52,7 +52,7 @@ let isApproved;
 
 let getData = async () => {
     let obj = { regid: urid }
-    axios.post(url + "/profile-api/getprofile", obj).then(async (r) => {
+    axios.post("/profile-api/getprofile", obj).then(async (r) => {
         // console.log(r);
         getAmp(await r.data.data[0].pro);
         getTam(await r.data.data[0].amp);
@@ -83,7 +83,7 @@ let getData = async () => {
 
 let getOcup = () => {
     $("#ocup").empty()
-    axios.post(url + "/profile-api/getocup").then(r => {
+    axios.post("/profile-api/getocup").then(r => {
         $("#ocup").append(`<option ></option>`)
         r.data.data.map(i => {
             $("#ocup").append(`<option value="${i.ocup}">${i.ocup}</option>`)
@@ -95,7 +95,7 @@ getOcup()
 
 
 let getProv = async () => {
-    axios.get(url + "/eec-api/get-th-prov").then(r => {
+    axios.get("/eec-api/get-th-prov").then(r => {
         // console.log(r)
         $("#pro").empty()
         $("#amp").empty()
@@ -109,7 +109,7 @@ let getProv = async () => {
 }
 
 let getAmp = (e) => {
-    axios.get(url + "/eec-api/get-th-amp/" + e).then(r => {
+    axios.get("/eec-api/get-th-amp/" + e).then(r => {
         $("#amp").empty()
         $("#tam").empty()
         $("#amp").append(`<option value=""></option>`)
@@ -120,7 +120,7 @@ let getAmp = (e) => {
 }
 
 let getTam = (e) => {
-    axios.get(url + "/eec-api/get-th-tam/" + e).then(r => {
+    axios.get("/eec-api/get-th-tam/" + e).then(r => {
         $("#tam").empty()
         $("#tam").append(`<option value=""></option>`)
         r.data.data.map(i => {
@@ -130,7 +130,7 @@ let getTam = (e) => {
 }
 
 let getTamOne = (e) => {
-    axios.get(url + "/eec-api/get-th-onetam/" + e).then(r => {
+    axios.get("/eec-api/get-th-onetam/" + e).then(r => {
         r.data.data.map(i => {
             // console.log(i);
             $("#pro_name").val(i.pro_name);
@@ -226,7 +226,7 @@ $("#imgfile").change(async () => {
 
     setTimeout(() => {
         // console.log(dataurl);
-        axios.post(url + "/profile-api/updateimgprofile", {
+        axios.post("/profile-api/updateimgprofile", {
             regid: pfid,
             img: dataurl
         }).then(r => {

@@ -91,7 +91,7 @@ let closeModal = () => {
 let deleteValue = () => {
     let uid = $("#uid").val()
     let usrname = $("#usrname").val()
-    axios.post(url + "/profile-api/delete", { regid: uid, usrname: usrname }).then(r => {
+    axios.post("/profile-api/delete", { regid: uid, usrname: usrname }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }

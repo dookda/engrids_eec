@@ -40,9 +40,9 @@ let refreshPage = () => {
 }
 
 let getActivity = (prj_measure) => {
-    axios.post(url + "/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
+    axios.post("/projmon-api/getmeasure", { prj_measure: prj_measure }).then(r => {
         $("#list_measure").empty()
-        axios.post(url + "/projmon-api/getmeasurebyactnonprj", { prj_id: id }).then(x => {
+        axios.post("/projmon-api/getmeasurebyactnonprj", { prj_id: id }).then(x => {
             // console.log(x, prj_measure);
             if (x.data.data[0].prj_measure == prj_measure) {
                 r.data.data.map((i, k) => {
@@ -117,7 +117,7 @@ let getActivity = (prj_measure) => {
 }
 
 let getValue = (id) => {
-    axios.post(url + "/projmon-api/getonenonproj", { prj_id: id }).then(async (r) => {
+    axios.post("/projmon-api/getonenonproj", { prj_id: id }).then(async (r) => {
         // console.log(r.data.data[0]);
         $('#prj_id').val(r.data.data[0].prj_id)
         $('#prj_measure').val(r.data.data[0].prj_measure)
@@ -151,7 +151,7 @@ $("#fieldForm").submit(function (e) {
         }
     }
     console.log(obj);
-    axios.post(url + "/projmon-api/updatenonprojdata", obj).then((r) => {
+    axios.post("/projmon-api/updatenonprojdata", obj).then((r) => {
         r.data.data == "success" ? refreshPage() : null
     })
     return false;

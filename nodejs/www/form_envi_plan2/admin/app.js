@@ -84,7 +84,7 @@ let closeModal = () => {
 let deleteValue = () => {
     let uid = $("#uid").val()
     let usrname = $("#usrname").val()
-    axios.post(url + "/login-api/delete", { uid: uid, usrname: usrname }).then(r => {
+    axios.post("/login-api/delete", { uid: uid, usrname: usrname }).then(r => {
         r.data.data == "success" ? closeModal() : null
     })
 }

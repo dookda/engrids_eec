@@ -53,7 +53,7 @@ const ghyb = L.tileLayer('https://{s}.google.com/vt/lyrs=y,m&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__03_tambon_eec",
     format: "image/png",
     transparent: true,
@@ -62,7 +62,7 @@ const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__02_amphoe_eec",
     format: "image/png",
     transparent: true,
@@ -71,30 +71,30 @@ const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", 
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
 
-const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: "eec:a__01_prov_eec",
     format: "image/png",
     transparent: true,
     // maxZoom: 10,
     // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
 });
-// const specieseec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const specieseec = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__66_species_eec',
 //     format: 'image/png',
 //     transparent: true
 // });
-// const naturaleec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const naturaleec = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__71_natural_eec',
 //     format: 'image/png',
 //     transparent: true
 // });
-// const wetlandeec = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+// const wetlandeec = L.tileLayer.wms("/geoserver/eec/wms?", {
 //     layers: 'eec:a__80_wetland_eec',
 //     format: 'image/png',
 //     transparent: true
 // });
 
-const forest2563 = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+const forest2563 = L.tileLayer.wms("/geoserver/eec/wms?", {
     layers: 'eec:a__27_f_type63_eec',
     format: 'image/png',
     transparent: true
@@ -209,7 +209,7 @@ let closeModal = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let proj_id = $("#projId").val()
-    axios.post(url + "/biodiversity-api/delete", { proj_id: proj_id }).then(r => {
+    axios.post("/biodiversity-api/delete", { proj_id: proj_id }).then(r => {
         r.data.data == "success" ? closeModal() : null;
         $('#myTable').DataTable().ajax.reload();
         window.location.reload();
@@ -610,7 +610,7 @@ let pieChart = (div, val) => {
     });
 }
 
-let wfs = "https://engrids.soc.cmu.ac.th/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&maxFeatures=50&outputFormat=application%2Fjson"
+let wfs = "/geoserver/eec/ows?service=WFS&version=1.0.0&request=GetFeature&maxFeatures=50&outputFormat=application%2Fjson"
 
 
 // div.innerHTML += '<img src="./../../marker/forest2.png" width="10px"><span>ชนิดพันธุ์สำคัญ หายาก และชีวภาพ</span><br>';
@@ -769,14 +769,14 @@ let zoomExtent = (lyr, code) => {
         }
     })
 
-    axios.get(url + `/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
+    axios.get(`/eec-api/get-bound-flip/${lyr}/${code}`).then(r => {
         let geom = JSON.parse(r.data.data[0].geom)
         var polygon = L.polygon(geom.coordinates, { color: "red", name: "bound", fillOpacity: 0.0 }).addTo(map);
         map.fitBounds(polygon.getBounds());
     })
 }
 let getPro = (procode) => {
-    axios.get(url + `/eec-api/get-amp/${procode}`).then(r => {
+    axios.get(`/eec-api/get-amp/${procode}`).then(r => {
         // console.log(r.data.data);
         $("#amp").empty().append(`<option value="eec">เลือกอำเภอ</option>`);
         $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
@@ -786,7 +786,7 @@ let getPro = (procode) => {
     })
 }
 let getAmp = (ampcode) => {
-    axios.get(url + `/eec-api/get-tam/${ampcode}`).then(r => {
+    axios.get(`/eec-api/get-tam/${ampcode}`).then(r => {
         $("#tam").empty().append(`<option value="eec">เลือกตำบล</option>`);
         r.data.data.map(i => {
             $("#tam").append(`<option value="${i.tambon_idn}">${i.tam_namt}</option>`)

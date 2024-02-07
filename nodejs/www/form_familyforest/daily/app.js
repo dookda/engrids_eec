@@ -37,21 +37,21 @@ function loadMap() {
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
 
-    const tam = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const tam = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__03_tambon_eec",
         format: "image/png",
         transparent: true,
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const amp = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const amp = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__02_amphoe_eec",
         format: "image/png",
         transparent: true,
         // CQL_FILTER: 'pro_code=20 OR pro_code=21 OR pro_code=24'
     });
 
-    const pro = L.tileLayer.wms("https://engrids.soc.cmu.ac.th/geoserver/eec/wms?", {
+    const pro = L.tileLayer.wms("/geoserver/eec/wms?", {
         layers: "eec:a__01_prov_eec",
         format: "image/png",
         transparent: true,
@@ -93,7 +93,7 @@ $('#dt').val(today);
 $("#plantlist").on("change", function () {
     // console.log(this.value);
     if (this.value) {
-        axios.post(url + "/ff-api/getpacelgid", { gid: this.value }).then(r => {
+        axios.post("/ff-api/getpacelgid", { gid: this.value }).then(r => {
             // console.log(r);
             $("#ffid").val(`${r.data.data[0].ffid}`);
             $("#fplant").val(`${r.data.data[0].fplant}`);
@@ -103,7 +103,7 @@ $("#plantlist").on("change", function () {
 })
 
 let getDetail = (ffid) => {
-    axios.post(url + "/ff-api/getpacelone", { ffid: ffid }).then(r => {
+    axios.post("/ff-api/getpacelone", { ffid: ffid }).then(r => {
         // console.log(r);
         $("#plantlist").empty();
         $("#plantlist").append(`<option >เลือกชนิดพืช</option>`)
@@ -138,7 +138,7 @@ let getParcel = (ffid) => {
     getDetail(ffid)
 }
 
-axios.post(url + "/ff-api/getpacellist", { usrid: urid }).then(r => {
+axios.post("/ff-api/getpacellist", { usrid: urid }).then(r => {
     $("#fname").val(urname);
     // console.log(r);
     r.data.data.map((i, k) => {
@@ -261,7 +261,7 @@ let sendData = () => {
         }
     }
 
-    axios.post(url + "/ff-api/insertdaily", obj).then(r => {
+    axios.post("/ff-api/insertdaily", obj).then(r => {
         $('#okModal').modal('show');
         setZero();
     });
@@ -298,7 +298,7 @@ let confirmAdd = () => {
 let deleteValue = () => {
     // console.log($("#projId").val());
     let gid = $("#projId").val()
-    axios.post(url + "/ff-api/delete", { gid: gid }).then(r => {
+    axios.post("/ff-api/delete", { gid: gid }).then(r => {
         if (r.data.data == "success") {
             $('#deleteModal').modal('hide')
             $('#myTable').DataTable().ajax.reload();
