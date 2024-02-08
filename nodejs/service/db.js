@@ -8,6 +8,15 @@ const eec = new Pool({
     port: 5432,
 });
 
+const eac3 = new Pool({
+    user: 'postgres',
+    host: 'postgis',
+    database: 'eac_data3',
+    password: '1234',
+    port: 5432,
+});
+
+
 const geo = new Pool({
     user: 'postgres',
     host: 'postgis',
@@ -66,6 +75,7 @@ const iwtrq = new Pool({
 
 exports.oauth = oauth;
 exports.eec = eec;
+exports.eac3 = eac3;
 exports.geo = geo;
 exports.dat = dat;
 exports.iot = iot;
